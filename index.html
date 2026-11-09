@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALYST | Home</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalyst.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="image/photo_2026-10-20_20-15-20.jpg" alt="CATALYST logo">
+                <span class="logo-text">CATALYST</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Explore</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="disease-library.html">Disease Library</a></li>
+                            <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                            <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                            <li><a href="early-warning.html">Early Warning</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Stay Safe</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                            <li><a href="references.html">Medical References</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+        </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="mobile-label">Explore</li>
+                    <li><a href="disease-library.html">Disease Library</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                    <li><a href="early-warning.html">Early Warning</a></li>
+
+                    <li class="mobile-label">Stay Safe</li>
+                    <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                    <li><a href="references.html">Medical References</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+
+                    <li class="mobile-label">More</li>
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-auth" id="mobileAuth">
+                    <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                    <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrap">
+            <span class="badge badge-dark">Myanmar Epidemic Awareness Portal</span>
+
+            <h1>PREPARED TODAY.<br><span>PROTECTED TOMORROW.</span></h1>
+
+            <p>
+                Follow cholera, dengue, malaria, measles and TB in Yangon, learn how to protect your
+                family, and find 28 hospitals across Yangon, any time of the day.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="hospital-directory.html" class="btn btn-teal">Book Hospital Care</a>
+                <a href="disease-library.html" class="btn btn-white">Explore Diseases</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="wrap">
+        <div data-aos="zoom-in" class="stat-row">
+            <div class="stat">
+                <strong><span class="counter" data-target="10">10</span>+</strong>
+                <span>Disease Profiles</span>
+            </div>
+            <div class="stat">
+                <strong>24/7</strong>
+                <span>Portal Availability</span>
+            </div>
+            <div class="stat">
+                <strong><span class="counter" data-target="28">28</span></strong>
+                <span>Yangon Hospitals</span>
+            </div>
+            <div class="stat">
+                <strong><span class="counter" data-target="33">33</span></strong>
+                <span>Yangon Townships Mapped</span>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="section alert-section">
+        <div class="wrap">
+            <div data-aos="fade-up" class="section-head">
+                <span class="badge">Yangon Early Warning</span>
+                <h2>What Is Happening Now</h2>
+                <div class="line"></div>
+                <p>Reported outbreaks, last reviewed <strong id="alertDate"></strong>.</p>
+            </div>
+            <div class="grid" id="alertList"></div>
+            <p class="faq-more"><a href="early-warning.html" class="btn btn-navy btn-small">Open the Yangon Early Warning page</a></p>
+        </div>
+    </section>
+
+    <section class="section section-grey">
+        <div class="wrap">
+
+            <div data-aos="fade-up" class="section-head">
+                <span class="badge">Our Purpose in Myanmar</span>
+                <h2>Operational Foundation</h2>
+                <div class="line"></div>
+                <p>Connecting Yangon citizens with care booking and local medical information.</p>
+            </div>
+
+            <div data-aos="fade-up" class="pillar-layout">
+
+                <div class="pillar-tabs" role="tablist" aria-orientation="vertical">
+                    <button type="button" class="pillar-tab active" id="goal-tab" data-bs-toggle="pill" data-bs-target="#goal-pane" role="tab" aria-controls="goal-pane" aria-selected="true">
+                        <span class="pillar-title">Immediate Access &amp; Booking</span>
+                        <span class="pillar-text">Book appointments at Yangon clinics and hospitals.</span>
+                    </button>
+                    <button type="button" class="pillar-tab" id="mission-tab" data-bs-toggle="pill" data-bs-target="#mission-pane" role="tab" aria-controls="mission-pane" aria-selected="false">
+                        <span class="pillar-title">Township Health Coverage</span>
+                        <span class="pillar-text">2-3 verified hospital listings for each township.</span>
+                    </button>
+                    <button type="button" class="pillar-tab" id="vision-tab" data-bs-toggle="pill" data-bs-target="#vision-pane" role="tab" aria-controls="vision-pane" aria-selected="false">
+                        <span class="pillar-title">Localized Disease Profiles</span>
+                        <span class="pillar-text">10 disease libraries and prevention guides.</span>
+                    </button>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="goal-pane" role="tabpanel" aria-labelledby="goal-tab" tabindex="0">
+                        <span class="badge">Yangon Healthcare Portal</span>
+                        <h3>24/7 Direct Care Booking</h3>
+                        <p>CATALYST lets citizens browse verified medical profiles, check symptoms online, and contact hospitals or ask for an emergency consultation at any time.</p>
+                        <div class="pillar-metrics">
+                            <div>
+                                <strong>28 Hospitals</strong>
+                                <span>Yangon City Directory</span>
+                            </div>
+                            <div>
+                                <strong>24/7 Access</strong>
+                                <span>Always Available Online</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="mission-pane" role="tabpanel" aria-labelledby="mission-tab" tabindex="0">
+                        <span class="badge">Yangon Healthcare Portal</span>
+                        <h3>Every Township Covered</h3>
+                        <p>Each major Yangon township has two to three listed facilities, so a patient can find the nearest government or private hospital instead of travelling across the city.</p>
+                        <div class="pillar-metrics">
+                            <div>
+                                <strong>16 Townships</strong>
+                                <span>Listed in the Directory</span>
+                            </div>
+                            <div>
+                                <strong>2-3 Per Area</strong>
+                                <span>Nearest Facility First</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="vision-pane" role="tabpanel" aria-labelledby="vision-tab" tabindex="0">
+                        <span class="badge">Yangon Healthcare Portal</span>
+                        <h3>Local Disease Knowledge</h3>
+                        <p>Ten disease profiles explain how each infection spreads, its warning signs and how families can prevent it, using guidance from WHO and the Myanmar Ministry of Health.</p>
+                        <div class="pillar-metrics">
+                            <div>
+                                <strong>10 Profiles</strong>
+                                <span>Common Myanmar Diseases</span>
+                            </div>
+                            <div>
+                                <strong>WHO Based</strong>
+                                <span>Prevention Focused</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-grey">
+        <div class="wrap">
+
+            <div data-aos="fade-up" class="section-head">
+                <h2>Quick Access &amp; Services</h2>
+                <div class="line"></div>
+                <p>Browse the disease profiles or find a hospital near your township.</p>
+            </div>
+
+            <div class="grid">
+
+                <div data-aos="zoom-in" class="card">
+                    <img src="image/photo_1_2026-11-02_20-24-20.jpg" alt="Yangon General Hospital">
+                    <div class="card-body">
+                        <span class="card-tag">28 Yangon Hospitals</span>
+                        <h3>Yangon Hospital Booking</h3>
+                        <p>
+                            Find verified hospitals for each township such as Bahan, Latha,
+                            Kamayut and Mayangone, then call or book a visit.
+                        </p>
+                        <a href="hospital-directory.html" class="btn btn-navy btn-small">Book Hospital Now</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="100" class="card">
+                    <img src="image/photo-1532187863486-abf9dbad1b69.avif" alt="Laboratory research">
+                    <div class="card-body">
+                        <span class="card-tag">10 Core Diseases</span>
+                        <h3>Diseases Library</h3>
+                        <p>
+                            Profiles on dengue, malaria, tuberculosis, measles,
+                            cholera and more, each with the latest Myanmar figures.
+                        </p>
+                        <a href="disease-library.html" class="btn btn-outline btn-small">Open Library</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="200" class="card">
+                    <img src="image/photo_6_2026-11-02_20-24-20.jpg" alt="Pinlon Hospital in Yangon">
+                    <div class="card-body">
+                        <span class="card-tag">24/7 Digital Check</span>
+                        <h3>Symptom Checker</h3>
+                        <p>
+                            Tick the symptoms you have and get advice on self care,
+                            a clinic visit, or emergency treatment.
+                        </p>
+                        <a href="symptom-checker.html" class="btn btn-outline btn-small">Check Symptoms</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" class="card">
+                    <img src="image/photo_3_2026-11-02_20-24-20.jpg" alt="Grand Hantha International Hospital in Yangon">
+                    <div class="card-body">
+                        <span class="card-tag">Yangon Alerts</span>
+                        <h3>Yangon Early Warning</h3>
+                        <p>
+                            Active health warnings, first signs to look for
+                            and a township check for Yangon city.
+                        </p>
+                        <a href="early-warning.html" class="btn btn-outline btn-small">View Warnings</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="100" class="card">
+                    <img src="image/laptop_mythvsfacts.avif" alt="Laptop with health facts">
+                    <div class="card-body">
+                        <span class="card-tag">Verified Facts</span>
+                        <h3>Myth vs Fact</h3>
+                        <p>
+                            Compare viral health rumours with the medical facts taken
+                            from WHO and Ministry of Health guidance.
+                        </p>
+                        <a href="myth-vs-facts.html" class="btn btn-outline btn-small">Verify Facts</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="200" class="card">
+                    <img src="image/photo_15_2026-11-02_20-24-20.jpg" alt="Defense Services General Hospital in Yangon">
+                    <div class="card-body">
+                        <span class="card-tag">First Aid</span>
+                        <h3>Emergency &amp; First Aid</h3>
+                        <p>
+                            First steps for high fever, dehydration and breathing
+                            problems, plus ambulance numbers in Yangon.
+                        </p>
+                        <a href="emergency-protocol.html" class="btn btn-outline btn-small">Read Guidance</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+
+            <div data-aos="fade-up" class="section-head">
+                <span class="badge">Public Guidance</span>
+                <h2>Frequently Asked Questions</h2>
+                <div class="line"></div>
+            </div>
+
+            <div data-aos="fade-up" class="faq-accordion">
+
+                <div class="faq-item open">
+                    <button type="button" class="faq-question" aria-expanded="true">
+                        Why do cholera and diarrhoea rise in the rainy season in Myanmar?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Heavy rain and floods mix sewage with drinking water. In August 2026 about 500 people were hospitalised with diarrhoea in Yangon in one week, and 149 tested positive for cholera. Boil or chlorinate drinking water and use oral rehydration salts at the first sign of watery diarrhoea.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        When is dengue season in Myanmar and how do I avoid it?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Dengue cases rise during the rainy season, from about June to October. The Aedes mosquito bites in the daytime and breeds in water storage drums, flower vases and old tyres, so empty and scrub them every week.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Is malaria a risk in Yangon?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Malaria is mostly a risk in forested and border areas of Myanmar, where cases have risen, not in the city itself. Test any fever before travelling back from these areas, and sleep under an insecticide-treated net when you visit them.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Are my children protected against measles?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Routine measles vaccine coverage in Myanmar was 71% for the first dose and 68% for the second dose in 2025. Ask your nearest clinic whether your child has had both doses, and join any measles-rubella campaign that is offered.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        When should someone see a doctor urgently?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Go to hospital at once for trouble breathing, chest pain, a stiff neck with fever, bleeding, repeated vomiting or severe dehydration. Call 192 for an ambulance in Yangon.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question" aria-expanded="false">
+                        Where can I follow official health updates?
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            The Myanmar Ministry of Health and Sports, WHO Myanmar and the UN Myanmar Health Cluster. Every source we use is listed on the Medical References page.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="faq-more">
+                <a href="faq.html" class="btn btn-navy btn-small">More Questions &amp; References</a>
+            </p>
+
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="disease-library.html">Disease Library</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                        <li><a href="early-warning.html">Early Warning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="hospital-directory.html">Hospital Directory</a></li>
+                        <li><a href="references.html">Medical References</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="about_us.html">About CATALYST</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="#" class="signin-link">Sign In</a></li>
+                        <li><a href="#" class="signup-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-underline"></div>
+                    <p>
+                        Knowledge creates awareness. Awareness creates change.
+                        Explore reliable information about infectious diseases and
+                        help build safer communities.
+                    </p>
+
+                    <form id="footerForm" class="footer-form">
+                        <label for="footerEmail" class="footer-hidden">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Enter your email">
+                        <button type="submit" class="nav-btn nav-btn-teal">Stay Informed</button>
+                    </form>
+
+                    <p id="footerMessage" class="footer-message">Reliable information. A healthier future.</p>
+
+                    <p>
+                        <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> |
+                        <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">MoHS Myanmar</a> |
+                        <a href="contact_us.html">Email us</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> CATALYST. All rights reserved.</p>
+                <nav>
+                    <a href="references.html">References</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="about_us.html">About</a>
+                    <a href="contact_us.html">Contact</a>
+                    <a href="#" class="signin-link">Sign In</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="warning-data.js"></script>
+
+    <script>
+
+        function countUp(box) {
+            let target = Number(box.getAttribute("data-target"));
+            let number = 0;
+            box.innerHTML = 0;
+
+            let timer = setInterval(function () {
+                number = number + 1;
+                box.innerHTML = number;
+
+                if (number >= target) {
+                    clearInterval(timer);
+                }
+            }, 1500 / target);
+        }
+
+        let counters = document.getElementsByClassName("counter");
+        for (let i = 0; i < counters.length; i++) {
+            countUp(counters[i]);
+        }
+
+        // Alert cards from warning-data.js (townships named in the August 2026 cholera reports)
+        document.getElementById("alertDate").textContent = WARNING_UPDATED;
+        const alertBox = document.getElementById("alertList");
+
+        ALERT_TOWNSHIPS.forEach((name) => {
+            const card = document.createElement("div");
+            card.className = "card";
+            card.innerHTML = `<div class="card-body"><span class="card-tag alert-tag">Cholera | Yangon</span><h3></h3><p></p><a class="btn btn-outline btn-small">View warning</a></div>`;
+            card.querySelector("h3").textContent = `${name} Township`;
+            card.querySelector("p").textContent = "Named in the August 2026 cholera reports. Boil drinking water and use oral rehydration salts for watery diarrhoea.";
+            card.querySelector("a").href = "early-warning.html?township=" + encodeURIComponent(name);
+            alertBox.appendChild(card);
+        });
+    </script>
+
+</body>
+</html>

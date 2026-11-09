@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALYST | Yangon Hospital & Clinic Directory</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalyst.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="hospital-directory.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="image/photo_2026-10-20_20-15-20.jpg" alt="CATALYST logo">
+                <span class="logo-text">CATALYST</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Explore</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="disease-library.html">Disease Library</a></li>
+                            <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                            <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                            <li><a href="early-warning.html">Early Warning</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Stay Safe</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                            <li><a href="references.html">Medical References</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+        </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="mobile-label">Explore</li>
+                    <li><a href="disease-library.html">Disease Library</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                    <li><a href="early-warning.html">Early Warning</a></li>
+
+                    <li class="mobile-label">Stay Safe</li>
+                    <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                    <li><a href="references.html">Medical References</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+
+                    <li class="mobile-label">More</li>
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-auth" id="mobileAuth">
+                    <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                    <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-small">
+        <div class="wrap">
+            <span class="badge badge-dark">Yangon Healthcare Access</span>
+            <h1>Yangon Hospital &amp; Clinic Directory</h1>
+            <p>
+                28 public and private hospitals across 16 Yangon townships.
+                Search by name or township, or filter by hospital type.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+
+            <div class="filter-row">
+                <input type="text" id="directorySearch" placeholder="Search hospital name, service or township..." aria-label="Search hospitals">
+
+                <select id="filterType" aria-label="Hospital type">
+                    <option value="all">All hospital types</option>
+                    <option value="Public Hospital">Public / Government</option>
+                    <option value="Private Specialist">Private</option>
+                </select>
+
+                <select id="filterTownship" aria-label="Township">
+                    <option value="all">All townships</option>
+                    <option value="Ahlone">Ahlone Township</option>
+                    <option value="Bahan">Bahan Township</option>
+                    <option value="Dagon">Dagon Township</option>
+                    <option value="Hlaing">Hlaing Township</option>
+                    <option value="Insein">Insein Township</option>
+                    <option value="Kamayut">Kamayut Township</option>
+                    <option value="Kyauktada">Kyauktada Township</option>
+                    <option value="Lanmadaw">Lanmadaw Township</option>
+                    <option value="Latha">Latha Township</option>
+                    <option value="Mayangone">Mayangone Township</option>
+                    <option value="Mingaladon">Mingaladon Township</option>
+                    <option value="North Okkalapa">North Okkalapa Township</option>
+                    <option value="Sanchaung">Sanchaung Township</option>
+                    <option value="Tamwe">Tamwe Township</option>
+                    <option value="Thingangyun">Thingangyun Township</option>
+                    <option value="Yankin">Yankin Township</option>
+                </select>
+            </div>
+
+            <p class="result-count">Showing <strong id="visible-count">28</strong> facilities</p>
+
+            <div class="grid">
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="yangon general hospital ygh public tertiary trauma er fever surgery latha" data-township="Latha" data-type="Public Hospital">
+                <img src="image/photo_1_2026-11-02_20-24-20.jpg" alt="Yangon General Hospital (YGH)" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Tertiary Hospital</span>
+                    <h3>Yangon General Hospital (YGH)</h3>
+                    <p class="address">Bogyoke Aung San Road, Latha Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Emergency Triage</li>
+                        <li><strong>Beds:</strong> 1,500+</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951256112">+95 1 256 112</a></li>
+                        <li><strong>Services:</strong> Trauma &amp; ER, Infectious Disease Ward, ICU Unit, Surgical Triage</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Take Downtown Bus lines 35, 51, or 65. Accessible via Bogyoke Aung San Rd near Lanmadaw junction.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yangon%20General%20Hospital%2C%20Bogyoke%20Aung%20San%20Road%2C%20Latha%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="ssc specialist hospital bahan private pediatric fever influenza clinic" data-township="Bahan" data-type="Private Specialist">
+                <img src="image/photo_2_2026-11-02_20-24-20.jpg" alt="SSC Specialist Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Facility</span>
+                    <h3>SSC Specialist Hospital</h3>
+                    <p class="address">Shin Saw Pu Road, Bahan Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> Open 24 Hours</li>
+                        <li><strong>Beds:</strong> 200</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951502888">+95 1 502 888</a></li>
+                        <li><strong>Services:</strong> Pediatrics, Maternal Care, PCR Diagnostics, CT Scan</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located near Shwe Gon Daing junction. Easily reachable via Bahan taxi routes or Kaba Aye Pagoda road buses.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=SSC%20Specialist%20Hospital%2C%20Shin%20Saw%20Pu%20Road%2C%20Bahan%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="grand hantha international hospital ahlone private emergency surgery clinic" data-township="Ahlone" data-type="Private Specialist">
+                <img src="image/photo_3_2026-11-02_20-24-20.jpg" alt="Grand Hantha International" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Tertiary Hospital</span>
+                    <h3>Grand Hantha International</h3>
+                    <p class="address">Lower Kyimyindaine Road, Ahlone Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Trauma Care</li>
+                        <li><strong>Beds:</strong> 700</li>
+                        <li><strong>Phone:</strong> <a href="tel:+9512303788">+95 1 230 3788</a></li>
+                        <li><strong>Services:</strong> Emergency ER, Cardiology, Isolation Units, Ambulance Service</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located on Lower Kyimyindaine Rd, Ahlone. Accessible via Strand Road or Pyay Road connecting routes.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Grand%20Hantha%20International%20Hospital%2C%20Lower%20Kyimyindaine%20Road%2C%20Ahlone%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="north okkalapa general hospital public tertiary trauma infectious north okkalapa" data-township="North Okkalapa" data-type="Public Hospital">
+                <img src="image/photo_4_2026-11-02_20-24-20.jpg" alt="North Okkalapa General Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Teaching Hospital</span>
+                    <h3>North Okkalapa General Hospital</h3>
+                    <p class="address">Khantharyar Road, North Okkalapa Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Emergency Response</li>
+                        <li><strong>Beds:</strong> 800+</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951690124">+95 1 690 124</a></li>
+                        <li><strong>Services:</strong> Trauma &amp; ER, Tropical Diseases, General Surgery</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located near University of Medicine 2. Accessible via Kaba Aye Pagoda Rd or Thanthumar Rd.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=North%20Okkalapa%20General%20Hospital%2C%20Khantharyar%20Road%2C%20North%20Okkalapa%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="victoria hospital mayangone private specialist emergency cardiology neurology" data-township="Mayangone" data-type="Private Specialist">
+                <img src="image/photo_5_2026-11-02_20-24-20.jpg" alt="Victoria Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Hospital</span>
+                    <h3>Victoria Hospital</h3>
+                    <p class="address">New Parami Road, Mayangone Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Specialist Desk</li>
+                        <li><strong>Beds:</strong> 250</li>
+                        <li><strong>Phone:</strong> <a href="tel:+9519666141">+95 1 966 6141</a></li>
+                        <li><strong>Services:</strong> Cardiology, Neurology, Diagnostic Imaging</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located off New Parami Rd. Easy access via Pyay Rd or Kaba Aye Pagoda Rd.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Victoria%20Hospital%2C%20New%20Parami%20Road%2C%20Mayangone%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="pinlon hospital north okkalapa private oncology cardiac surgery specialist" data-township="North Okkalapa" data-type="Private Specialist">
+                <img src="image/photo_6_2026-11-02_20-24-20.jpg" alt="Pinlon Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Cancer &amp; Cardiac Facility</span>
+                    <h3>Pinlon Hospital</h3>
+                    <p class="address">Pinlon Road, North Okkalapa Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 ER &amp; Oncology</li>
+                        <li><strong>Beds:</strong> 300</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951582143">+95 1 582 143</a></li>
+                        <li><strong>Services:</strong> Oncology, Radiotherapy, Cardiothoracic Surgery</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located along Pinlon Rd. Take YBS route 29 or 37 toward North Okkalapa.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Pinlon%20Hospital%2C%20Pinlon%20Road%2C%20North%20Okkalapa%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="yankin children hospital public pediatric fever surge infant care yankin" data-township="Yankin" data-type="Public Hospital">
+                <img src="image/photo_7_2026-11-02_20-24-20.jpg" alt="Yankin Children&#x27;s Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Pediatric Hospital</span>
+                    <h3>Yankin Children&#x27;s Hospital</h3>
+                    <p class="address">Kanbe Road, Yankin Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Pediatric ER</li>
+                        <li><strong>Beds:</strong> 500</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951556633">+95 1 556 633</a></li>
+                        <li><strong>Services:</strong> Pediatric ICU, Dengue Management, Neonatal Care</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Situated on Kanbe Road near Yankin Center. Reached via Yankin Rd bus lines.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yankin%20Children%20Hospital%2C%20Kanbe%20Road%2C%20Yankin%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="asia royal hospital kamayut private tertiary emergency surgical center" data-township="Kamayut" data-type="Private Specialist">
+                <img src="image/photo_13_2026-11-02_20-24-20.jpg" alt="Asia Royal Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Facility</span>
+                    <h3>Asia Royal Hospital</h3>
+                    <p class="address">Baho Road, Kamayut Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 ER &amp; ICU</li>
+                        <li><strong>Beds:</strong> 250</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951538055">+95 1 538 055</a></li>
+                        <li><strong>Services:</strong> Laparoscopic Surgery, Dialysis, ICU &amp; CCU</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located on Baho Road near Hledan Junction. Accessible via Pyay Road or Baho Road.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Asia%20Royal%20Hospital%2C%20Baho%20Road%2C%20Kamayut%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="pun hlaing hospital private jci international emergency surgery specialist mayangone" data-township="Mayangone" data-type="Private Specialist">
+                <img src="image/photo_10_2026-11-02_20-24-20.jpg" alt="Pun Hlaing Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">JCI Accredited Hospital</span>
+                    <h3>Pun Hlaing Hospital</h3>
+                    <p class="address">Pun Hlaing Golf Estate Avenue, Yangon</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 International ER</li>
+                        <li><strong>Beds:</strong> 170</li>
+                        <li><strong>Phone:</strong> <a href="tel:+9513684323">+95 1 368 4323</a></li>
+                        <li><strong>Services:</strong> Trauma &amp; ER, Orthopedics, Full Diagnostics</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Accessible via Bayint Naung Bridge or Hlaing River crossing road routes.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Pun%20Hlaing%20Hospital%2C%20Pun%20Hlaing%20Golf%20Estate%20Avenue%2C%20Yangon%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="thingangyun sanpya general hospital public tertiary trauma infectious disease thingangyun" data-township="Thingangyun" data-type="Public Hospital">
+                <img src="image/photo_9_2026-11-02_20-24-20.jpg" alt="Thingangyun Sanpya Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Tertiary Hospital</span>
+                    <h3>Thingangyun Sanpya Hospital</h3>
+                    <p class="address">Lay Daung Kan Road, Thingangyun Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24 Hours Emergency</li>
+                        <li><strong>Beds:</strong> 500</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951571834">+95 1 571 834</a></li>
+                        <li><strong>Services:</strong> Acute Care, Internal Medicine, Dialysis Unit</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located on Lay Daung Kan Rd near Sanpya Market. Easily reached via Thingangyun bus lines.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Thingangyun%20Sanpya%20Hospital%2C%20Lay%20Daung%20Kan%20Road%2C%20Thingangyun%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="arogya hospital bahan private specialist medical center fever clinic" data-township="Bahan" data-type="Private Specialist">
+                <img src="image/photo_11_2026-11-02_20-24-20.jpg" alt="Arogya Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Hospital</span>
+                    <h3>Arogya Hospital</h3>
+                    <p class="address">Saya San Road, Bahan Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> Open 24/7</li>
+                        <li><strong>Beds:</strong> 120</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951553795">+95 1 553 795</a></li>
+                        <li><strong>Services:</strong> Internal Medicine, Endoscopy, Pathology Lab</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located along Saya San Road near Kokkine Swimming Club.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Arogya%20Hospital%2C%20Saya%20San%20Road%2C%20Bahan%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="central womens hospital public maternity obstetrics gynecology lanmadaw" data-township="Lanmadaw" data-type="Public Hospital">
+                <img src="image/photo_12_2026-11-02_20-24-20.jpg" alt="Central Women&#x27;s Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Maternity Hospital</span>
+                    <h3>Central Women&#x27;s Hospital</h3>
+                    <p class="address">Min Kyaung Street, Lanmadaw Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Maternity ER</li>
+                        <li><strong>Beds:</strong> 800</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951222811">+95 1 222 811</a></li>
+                        <li><strong>Services:</strong> Obstetrics, Gynecology, High-Risk Delivery</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located in Lanmadaw near Pyay Road entrance. Convenient downtown taxi route.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Central%20Women%20Hospital%2C%20Min%20Kyaung%20Street%2C%20Lanmadaw%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="insein general hospital public tertiary trauma infectious disease insein" data-township="Insein" data-type="Public Hospital">
+                <img src="image/photo_8_2026-11-02_20-24-20.jpg" alt="Insein General Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public General Hospital</span>
+                    <h3>Insein General Hospital</h3>
+                    <p class="address">Min Gyi Road, Insein Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 ER Triage</li>
+                        <li><strong>Beds:</strong> 500</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951640434">+95 1 640 434</a></li>
+                        <li><strong>Services:</strong> Trauma &amp; Surgery, Pediatric Ward, Fever Triage</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located on Min Gyi Road near Insein Railway Station. Served by YBS bus lines 21, 37.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Insein%20General%20Hospital%2C%20Min%20Gyi%20Road%2C%20Insein%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="sakura hospital sanchaung private specialist surgical internal medicine" data-township="Sanchaung" data-type="Private Specialist">
+                <img src="image/photo_22_2026-11-02_20-24-21.jpg" alt="Sakura Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Facility</span>
+                    <h3>Sakura Hospital</h3>
+                    <p class="address">Shin Saw Pu Road, Sanchaung Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24 Hours Open</li>
+                        <li><strong>Beds:</strong> 100</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951512668">+95 1 512 668</a></li>
+                        <li><strong>Services:</strong> Internal Medicine, General Surgery, Diagnostics</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located in Sanchaung near Pyay Road junction. Easy access from Dagon and Bahan.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Sakura%20Hospital%2C%20Shin%20Saw%20Pu%20Road%2C%20Sanchaung%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="defense services general hospital dsgh public tertiary trauma mingaladon" data-township="Mingaladon" data-type="Public Hospital">
+                <img src="image/photo_15_2026-11-02_20-24-20.jpg" alt="Defense Services Hospital (DSGH)" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Tertiary Medical Center</span>
+                    <h3>Defense Services Hospital (DSGH)</h3>
+                    <p class="address">Pyay Road, Mingaladon Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Level 1 Trauma</li>
+                        <li><strong>Beds:</strong> 1,000+</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951635088">+95 1 635 088</a></li>
+                        <li><strong>Services:</strong> Level 1 Trauma, Burn Unit, Advanced Surgery</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located along Pyay Road near Yangon International Airport in Mingaladon.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Defense%20Services%20General%20Hospital%2C%20Pyay%20Road%2C%20Mingaladon%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="academy hospital kamayut private specialist clinic emergency surgery" data-township="Kamayut" data-type="Private Specialist">
+                <img src="image/photo_16_2026-11-02_20-24-20.jpg" alt="Academy Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Hospital</span>
+                    <h3>Academy Hospital</h3>
+                    <p class="address">Pyay Road, Kamayut Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Care</li>
+                        <li><strong>Beds:</strong> 100</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951513111">+95 1 513 111</a></li>
+                        <li><strong>Services:</strong> Internal Medicine, ENT Specialist, Radiology</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Situated along Pyay Road near Hledan Overpass in Kamayut.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Academy%20Hospital%2C%20Pyay%20Road%2C%20Kamayut%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="yangon children hospital dagon public pediatric tertiary referral fever" data-township="Dagon" data-type="Public Hospital">
+                <img src="image/photo_18_2026-11-02_20-24-20.jpg" alt="Yangon Children&#x27;s Hospital (Dagon)" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Pediatric Referral</span>
+                    <h3>Yangon Children&#x27;s Hospital (Dagon)</h3>
+                    <p class="address">Pyay Road, Dagon Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Children ER</li>
+                        <li><strong>Beds:</strong> 550</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951222804">+95 1 222 804</a></li>
+                        <li><strong>Services:</strong> Pediatric ER, Infectious Disease Ward, Child Surgery</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located on Pyay Road opposite Peoples Park in Dagon Township.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yangon%20Children%20Hospital%20%28Dagon%29%2C%20Pyay%20Road%2C%20Dagon%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="osc hospital hlaing private specialist emergency surgical center" data-township="Hlaing" data-type="Private Specialist">
+                <img src="image/photo_17_2026-11-02_20-24-20.jpg" alt="OSC Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Hospital</span>
+                    <h3>OSC Hospital</h3>
+                    <p class="address">Pyay Road, Hlaing Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24 Hours Emergency</li>
+                        <li><strong>Beds:</strong> 150</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951664366">+95 1 664 366</a></li>
+                        <li><strong>Services:</strong> Orthopedics, General Surgery, Intensive Care</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Situated on Pyay Road, Hlaing Township near MICT Park.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=OSC%20Hospital%2C%20Pyay%20Road%2C%20Hlaing%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="waibargi infectious disease hospital public specialized quarantine fever dengue cholera north okkalapa" data-township="North Okkalapa" data-type="Public Hospital">
+                <img src="image/photo_19_2026-11-02_20-24-20.jpg" alt="Waibargi Infectious Disease Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Specialized Epidemic Facility</span>
+                    <h3>Waibargi Infectious Disease Hospital</h3>
+                    <p class="address">Waibargi Road, North Okkalapa Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Epidemic Isolation</li>
+                        <li><strong>Beds:</strong> 400</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951690334">+95 1 690 334</a></li>
+                        <li><strong>Services:</strong> Isolation Wards, Dengue &amp; Cholera Unit, PCR Biosafety Lab</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Primary quarantine facility in Yangon. Reachable via Waibargi Road in North Okkalapa.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Waibargi%20Infectious%20Disease%20Hospital%2C%20Waibargi%20Road%2C%20North%20Okkalapa%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="arrawjan hospital tamwe private specialist diagnostic surgery" data-township="Tamwe" data-type="Private Specialist">
+                <img src="image/photo_20_2026-11-02_20-24-20.jpg" alt="Arrawjan Specialist Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Facility</span>
+                    <h3>Arrawjan Specialist Hospital</h3>
+                    <p class="address">East Horse Race Course Road, Tamwe Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24 Hours Open</li>
+                        <li><strong>Beds:</strong> 120</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951543205">+95 1 543 205</a></li>
+                        <li><strong>Services:</strong> Internal Medicine, Gastroenterology, CT Scan</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located near Tamwe Ocean Supercenter junction.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Arrawjan%20Specialist%20Hospital%2C%20East%20Horse%20Race%20Course%20Road%2C%20Tamwe%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="yangon ent hospital public ear nose throat specialist latha" data-township="Latha" data-type="Public Hospital">
+                <img src="image/photo_21_2026-11-02_20-24-20.jpg" alt="Yangon ENT Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Specialist Hospital</span>
+                    <h3>Yangon ENT Hospital</h3>
+                    <p class="address">Alan Pya Pagoda Road, Latha Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> ENT Emergency Desk</li>
+                        <li><strong>Beds:</strong> 200</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951378122">+95 1 378 122</a></li>
+                        <li><strong>Services:</strong> Ear Nose Throat Surgery, Audiology, Head &amp; Neck Surgery</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located near Yangon Railway Station downtown area.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yangon%20ENT%20Hospital%2C%20Alan%20Pya%20Pagoda%20Road%2C%20Latha%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="west yangon general hospital public tertiary acute care ahlone" data-township="Ahlone" data-type="Public Hospital">
+                <img src="image/photo_14_2026-11-02_20-24-20.jpg" alt="West Yangon General Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public General Hospital</span>
+                    <h3>West Yangon General Hospital</h3>
+                    <p class="address">Kyimyindaing Lower Road, Ahlone Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 ER</li>
+                        <li><strong>Beds:</strong> 500</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951221442">+95 1 221 442</a></li>
+                        <li><strong>Services:</strong> Acute Medical Care, General Surgery, Outpatient Clinic</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Situated along Kyimyindaing Lower Road in Ahlone.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=West%20Yangon%20General%20Hospital%2C%20Kyimyindaing%20Lower%20Road%2C%20Ahlone%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="muslim free hospital kyauktada public non-profit charitable clinic" data-township="Kyauktada" data-type="Public Hospital">
+                <div class="no-photo" role="img" aria-label="Photo of Muslim Free Hospital coming soon"><span>&#127973;</span>Photo coming soon</div>
+                <div class="card-body">
+                    <span class="card-tag">Non-Profit Charitable Facility</span>
+                    <h3>Muslim Free Hospital</h3>
+                    <p class="address">Maha Bandula Street, Kyauktada Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> Daily Outpatient &amp; ER</li>
+                        <li><strong>Beds:</strong> 160</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951241240">+95 1 241 240</a></li>
+                        <li><strong>Services:</strong> Charitable Outpatient, Ophthalmology, General Medicine</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located in Kyauktada downtown on Maha Bandula Street.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Muslim%20Free%20Hospital%2C%20Maha%20Bandula%20Street%2C%20Kyauktada%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="bahosi hospital lanmadaw private specialist medical center clinic" data-township="Lanmadaw" data-type="Private Specialist">
+                <div class="no-photo" role="img" aria-label="Photo of Bahosi Hospital coming soon"><span>&#127973;</span>Photo coming soon</div>
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Facility</span>
+                    <h3>Bahosi Hospital</h3>
+                    <p class="address">Bahosi Housing Complex, Lanmadaw Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Outpatient &amp; ER</li>
+                        <li><strong>Beds:</strong> 110</li>
+                        <li><strong>Phone:</strong> <a href="tel:+9512300631">+95 1 230 0631</a></li>
+                        <li><strong>Services:</strong> Internal Medicine, Cardiology Consultation, Ultrasound</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located inside Bahosi Housing Complex near Bogyoke Aung San Road.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Bahosi%20Hospital%2C%20Bahosi%20Housing%20Complex%2C%20Lanmadaw%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="yangon eye hospital public specialized ophthalmology dagon" data-township="Dagon" data-type="Public Hospital">
+                <div class="no-photo" role="img" aria-label="Photo of Yangon Eye Hospital coming soon"><span>&#127973;</span>Photo coming soon</div>
+                <div class="card-body">
+                    <span class="card-tag">Public Tertiary Eye Hospital</span>
+                    <h3>Yangon Eye Hospital</h3>
+                    <p class="address">Natmauk Road, Dagon Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> Ocular Emergency Unit</li>
+                        <li><strong>Beds:</strong> 250</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951556406">+95 1 556 406</a></li>
+                        <li><strong>Services:</strong> Ophthalmology Surgery, Corneal Transplant, Retinal Specialist</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Situated on Natmauk Road near Kandawgyi Lake in Dagon.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yangon%20Eye%20Hospital%2C%20Natmauk%20Road%2C%20Dagon%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="100" class="card facility-item" data-name="shwe gon daing specialist center bahan private cardiology diagnostic" data-township="Bahan" data-type="Private Specialist">
+                <div class="no-photo" role="img" aria-label="Photo of Shwe Gon Daing Specialist Center coming soon"><span>&#127973;</span>Photo coming soon</div>
+                <div class="card-body">
+                    <span class="card-tag">Private Cardiac Center</span>
+                    <h3>Shwe Gon Daing Specialist Center</h3>
+                    <p class="address">Shwe Gon Daing Road, Bahan Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Heart Clinic</li>
+                        <li><strong>Beds:</strong> 180</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951544688">+95 1 544 688</a></li>
+                        <li><strong>Services:</strong> Cardiology CCU, Cath Lab, Vascular Surgery</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located directly at Shwe Gon Daing junction in Bahan.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Shwe%20Gon%20Daing%20Specialist%20Center%2C%20Shwe%20Gon%20Daing%20Road%2C%20Bahan%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" data-aos-delay="200" class="card facility-item" data-name="yangon orthopedic hospital public specialized trauma bone joint kyauktada" data-township="Kyauktada" data-type="Public Hospital">
+                <img src="image/photo_23_2026-11-02_20-24-21.jpg" alt="Yangon Orthopedic Hospital" loading="lazy">
+                <div class="card-body">
+                    <span class="card-tag">Public Specialized Trauma</span>
+                    <h3>Yangon Orthopedic Hospital</h3>
+                    <p class="address">Hanthawaddy Road, Yangon</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Bone &amp; Joint ER</li>
+                        <li><strong>Beds:</strong> 300</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951534312">+95 1 534 312</a></li>
+                        <li><strong>Services:</strong> Orthopedic Surgery, Spinal Trauma, Rehabilitation</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Situated along Hanthawaddy Circle near Kyauktada/Kamayut border.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Yangon%20Orthopedic%20Hospital%2C%20Hanthawaddy%20Road%2C%20Yangon%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            <div data-aos="zoom-in" class="card facility-item" data-name="kanote hospital mingaladon private specialist general surgery family clinic" data-township="Mingaladon" data-type="Private Specialist">
+                <div class="no-photo" role="img" aria-label="Photo of Kanote Specialist Hospital coming soon"><span>&#127973;</span>Photo coming soon</div>
+                <div class="card-body">
+                    <span class="card-tag">Private Specialist Facility</span>
+                    <h3>Kanote Specialist Hospital</h3>
+                    <p class="address">Yangon-Pyay Highway, Mingaladon Township</p>
+                    <ul class="facts">
+                        <li><strong>Hours:</strong> 24/7 Outpatient</li>
+                        <li><strong>Beds:</strong> 90</li>
+                        <li><strong>Phone:</strong> <a href="tel:+951638720">+95 1 638 720</a></li>
+                        <li><strong>Services:</strong> Family Medicine, General Surgery, Diagnostic Lab</li>
+                    </ul>
+                    <p class="how-to"><strong>Getting there:</strong> Located along Yangon-Pyay Highway in Mingaladon Township.</p>
+                    <a href="https://www.google.com/maps/search/?api=1&amp;query=Kanote%20Specialist%20Hospital%2C%20Yangon-Pyay%20Highway%2C%20Mingaladon%20Township%2C%20Yangon" target="_blank" rel="noopener" class="btn btn-navy btn-small">Get Directions</a>
+                </div>
+            </div>
+
+            </div>
+
+            <p id="noResults" class="no-results" hidden>No hospital matches your search. Try fewer words or choose &ldquo;All&rdquo; in the filters.</p>
+
+            <p class="directory-note">
+                Please call the hospital before you travel to check opening hours and services.
+                In an emergency, go to the nearest emergency department.
+            </p>
+
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="disease-library.html">Disease Library</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                        <li><a href="early-warning.html">Early Warning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="hospital-directory.html">Hospital Directory</a></li>
+                        <li><a href="references.html">Medical References</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="about_us.html">About CATALYST</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="#" class="signin-link">Sign In</a></li>
+                        <li><a href="#" class="signup-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-underline"></div>
+                    <p>
+                        Knowledge creates awareness. Awareness creates change.
+                        Explore reliable information about infectious diseases and
+                        help build safer communities.
+                    </p>
+
+                    <form id="footerForm" class="footer-form">
+                        <label for="footerEmail" class="footer-hidden">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Enter your email">
+                        <button type="submit" class="nav-btn nav-btn-teal">Stay Informed</button>
+                    </form>
+
+                    <p id="footerMessage" class="footer-message">Reliable information. A healthier future.</p>
+
+                    <p>
+                        <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> |
+                        <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">MoHS Myanmar</a> |
+                        <a href="contact_us.html">Email us</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> CATALYST. All rights reserved.</p>
+                <nav>
+                    <a href="references.html">References</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="about_us.html">About</a>
+                    <a href="contact_us.html">Contact</a>
+                    <a href="#" class="signin-link">Sign In</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="hospital-directory.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALYST | Profile Interface</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalyst.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="image/photo_2026-10-20_20-15-20.jpg" alt="CATALYST logo">
+                <span class="logo-text">CATALYST</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Explore</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="disease-library.html">Disease Library</a></li>
+                            <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                            <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                            <li><a href="early-warning.html">Early Warning</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Stay Safe</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                            <li><a href="references.html">Medical References</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+        </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="mobile-label">Explore</li>
+                    <li><a href="disease-library.html">Disease Library</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                    <li><a href="early-warning.html">Early Warning</a></li>
+
+                    <li class="mobile-label">Stay Safe</li>
+                    <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                    <li><a href="references.html">Medical References</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+
+                    <li class="mobile-label">More</li>
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-auth" id="mobileAuth">
+                    <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                    <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="loggedOut" class="wrap logged-out" hidden>
+            <p>
+                You are not signed in.
+                <a href="#" class="signin-link">Sign in</a> or
+                <a href="#" class="signup-link">create an account</a>.
+            </p>
+        </div>
+
+        <div id="accountPreview" hidden>
+
+            <div class="login-banner" id="loginBanner" role="status">
+                <div class="wrap"><span id="loginBannerText"></span></div>
+            </div>
+
+            <section class="passport-section">
+                <div class="wrap passport-grid">
+
+                    <article class="passport" aria-label="Health passport">
+                        <header class="passport-head">
+                            <span>CATALYST HEALTH PASSPORT</span>
+                            <span>YANGON, MYANMAR</span>
+                        </header>
+
+                        <div class="passport-body">
+                            <div class="seal" id="avatar" aria-hidden="true">?</div>
+                            <div class="passport-fields">
+                                <p class="field-label" id="greeting">Hello</p>
+                                <h1 id="userName"></h1>
+                                <dl>
+                                    <div><dt>Member no.</dt><dd id="memberNo"></dd></div>
+                                    <div><dt>Home township</dt><dd id="userArea"></dd></div>
+                                    <div><dt>Member since</dt><dd id="statSince">-</dd></div>
+                                    <div><dt>Email</dt><dd id="userEmail"></dd></div>
+                                </dl>
+                            </div>
+                        </div>
+
+
+                        <div class="passport-actions">
+                            <button type="button" class="btn btn-white btn-small" id="editBtn">Edit passport</button>
+                            <button type="button" class="btn btn-ghost btn-small" id="logoutBtn">Log out</button>
+                        </div>
+                    </article>
+
+                    <article class="area-card">
+                        <span class="level-tag" id="areaLevel"></span>
+                        <h2 id="areaTitle">Your area</h2>
+                        <p class="area-text" id="areaText"></p>
+                        <p class="area-advice" id="areaAdvice"></p>
+                        <a href="early-warning.html" class="btn btn-navy btn-small" id="areaLink">Open the Yangon Early Warning page</a>
+                        <p class="area-source" id="areaSource"></p>
+                    </article>
+
+                </div>
+            </section>
+
+            <div class="wrap profile-body">
+
+                <section class="panel" id="seasonPanel">
+                    <h2>Myanmar health calendar</h2>
+                    <p class="panel-sub" id="seasonNow"></p>
+                    <div class="calendar-scroll"><div class="calendar" id="calendar"></div></div>
+                    <ul class="calendar-key">
+                        <li><span class="swatch hot"></span> Hot season (March to May)</li>
+                        <li><span class="swatch rainy"></span> Rainy season (June to October)</li>
+                        <li><span class="swatch cool"></span> Cool season (November to February)</li>
+                    </ul>
+                    <p class="panel-note">General yearly pattern, not a forecast. Dots show the months when each disease usually rises.</p>
+                </section>
+
+                <div class="two-panels">
+                    <section class="panel">
+                        <h2>My protection checklist</h2>
+                        <div class="progress" aria-hidden="true"><div id="progressBar"></div></div>
+                        <p class="panel-sub" id="progressText"></p>
+                        <ul class="checklist" id="checklist"></ul>
+                        <p class="panel-note">Saved in this browser only.</p>
+                    </section>
+
+                    <section class="panel">
+                        <h2>Upcoming appointments</h2>
+                        <p class="panel-sub"><span id="statUpcoming">0</span> to attend, <span id="statAppointments">0</span> saved</p>
+                        <ul class="appointments" id="appointmentList"></ul>
+                        <p class="panel-sub" id="noAppointments">You have no appointments yet. Book one to see it here.</p>
+                        <a href="catalyst-book-care.html" class="btn btn-teal btn-small">Book Care</a>
+                    </section>
+                </div>
+
+                <section class="panel">
+                    <h2>Go to</h2>
+                    <div class="tiles">
+                        <a href="catalyst-book-care.html" class="tile"><strong>Book Care</strong><span>Make an appointment</span></a>
+                        <a href="hospital-directory.html" id="townshipLink" class="tile"><strong>Find a Hospital</strong><span>28 Yangon hospitals</span></a>
+                        <a href="symptom-checker.html" class="tile"><strong>Symptom Checker</strong><span>Check how urgent</span></a>
+                        <a href="early-warning.html" class="tile"><strong>Early Warning</strong><span>Warnings by township</span></a>
+                        <a href="disease-library.html" class="tile"><strong>Disease Library</strong><span>10 profiles</span></a>
+                        <a href="emergency-protocol.html" class="tile"><strong>Emergency Protocol</strong><span>What to do first</span></a>
+                    </div>
+                </section>
+
+                <div class="two-panels">
+                    <section class="panel sos-panel">
+                        <h2>Emergency numbers</h2>
+                        <div class="sos-row">
+                            <a href="tel:192"><strong>192</strong><span>Ambulance</span></a>
+                            <a href="tel:191"><strong>191</strong><span>Fire</span></a>
+                            <a href="tel:199"><strong>199</strong><span>Police</span></a>
+                        </div>
+                        <a href="emergency-protocol.html" class="sos-link">Read the emergency protocol &rarr;</a>
+                    </section>
+
+                    <section class="panel">
+                        <h2>Tip of the day</h2>
+                        <p class="tip" id="tipText"></p>
+                        <p class="panel-note">Your details are saved only in this browser. <a href="privacy-policy.html">Privacy policy</a></p>
+                        <button type="button" class="btn btn-outline btn-small" id="deleteBtn">Delete my account</button>
+                    </section>
+                </div>
+
+            </div>
+
+            <dialog id="editDialog" class="edit-dialog" aria-labelledby="editTitle">
+                <form id="editForm">
+                    <h2 id="editTitle">Edit passport</h2>
+
+                    <label for="editName">Full name</label>
+                    <input type="text" id="editName" required>
+
+                    <label for="editTownship">Yangon township (optional)</label>
+                    <select id="editTownship"></select>
+
+                    <div class="dialog-buttons">
+                        <button type="button" class="btn btn-outline btn-small" id="cancelEdit">Cancel</button>
+                        <button type="submit" class="btn btn-teal btn-small">Save changes</button>
+                    </div>
+                </form>
+            </dialog>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="disease-library.html">Disease Library</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                        <li><a href="early-warning.html">Early Warning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="hospital-directory.html">Hospital Directory</a></li>
+                        <li><a href="references.html">Medical References</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="about_us.html">About CATALYST</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="#" class="signin-link">Sign In</a></li>
+                        <li><a href="#" class="signup-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-underline"></div>
+                    <p>
+                        Knowledge creates awareness. Awareness creates change.
+                        Explore reliable information about infectious diseases and
+                        help build safer communities.
+                    </p>
+
+                    <form id="footerForm" class="footer-form">
+                        <label for="footerEmail" class="footer-hidden">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Enter your email">
+                        <button type="submit" class="nav-btn nav-btn-teal">Stay Informed</button>
+                    </form>
+
+                    <p id="footerMessage" class="footer-message">Reliable information. A healthier future.</p>
+
+                    <p>
+                        <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> |
+                        <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">MoHS Myanmar</a> |
+                        <a href="contact_us.html">Email us</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> CATALYST. All rights reserved.</p>
+                <nav>
+                    <a href="references.html">References</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="about_us.html">About</a>
+                    <a href="contact_us.html">Contact</a>
+                    <a href="#" class="signin-link">Sign In</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="warning-data.js"></script>
+    <script src="account.js"></script>
+</body>
+</html>

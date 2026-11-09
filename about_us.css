@@ -1,0 +1,491 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(247, 250, 249);
+    color: rgb(13, 34, 53);
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+.text-navy {
+    color: rgb(13, 34, 53);
+}
+
+.text-teal {
+    color: rgb(17, 123, 117);
+}
+
+.section-padding {
+    padding: 75px 0;
+}
+
+.section-badge {
+    display: inline-block;
+    color: rgb(17, 123, 117);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.section-heading {
+    color: rgb(9, 24, 38);
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: rgb(82, 107, 126);
+    max-width: 750px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+.main-button {
+    background-color: rgb(0, 189, 190);
+    color: rgb(9, 24, 38);
+    border: none;
+    border-radius: 30px;
+    padding: 11px 23px;
+    font-weight: 600;
+}
+
+.main-button:hover {
+    background-color: rgb(0, 160, 161);
+    color: white;
+}
+
+.hero-banner {
+    background: linear-gradient(120deg, white, rgb(237, 244, 243));
+    padding: 75px 0;
+    border-bottom: 1px solid rgb(225, 235, 233);
+}
+
+.hero-banner h1 {
+    color: rgb(9, 24, 38);
+    font-size: 45px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.hero-banner p {
+    color: rgb(82, 107, 126);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.hero-image {
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.hero-label {
+    display: inline-block;
+    background-color: rgb(225, 247, 243);
+    color: rgb(17, 123, 117);
+    border: 1px solid rgb(112, 215, 203);
+    border-radius: 25px;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.feature-card {
+    height: 100%;
+    padding: 28px;
+    background-color: white;
+    border: 1px solid rgb(225, 235, 233);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(9, 24, 38, 0.04);
+}
+
+.feature-icon-box {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(225, 247, 243);
+    color: rgb(17, 123, 117);
+    border-radius: 12px;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.feature-card p {
+    color: rgb(82, 107, 126);
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.team-section {
+    background-color: white;
+}
+
+#teamCarousel {
+    max-width: 850px;
+    margin: 40px auto 0;
+    padding-bottom: 55px;
+}
+
+.team-member {
+    max-width: 600px;
+    margin: auto;
+    padding: 35px 25px;
+    background-color: rgb(247, 250, 249);
+    border: 1px solid rgb(225, 235, 233);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(9, 24, 38, 0.06);
+}
+
+.team-photo {
+    width: 190px;
+    height: 190px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgb(225, 247, 243);
+    background-color: rgb(13, 34, 53);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.team-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.team-member h3 {
+    color: rgb(13, 34, 53);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.team-role {
+    color: rgb(17, 123, 117);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.team-description {
+    color: rgb(82, 107, 126);
+    max-width: 430px;
+    margin: 15px auto 25px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.team-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgb(225, 247, 243);
+    color: rgb(17, 123, 117);
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.team-socials a:hover {
+    background-color: rgb(17, 123, 117);
+    color: white;
+    transform: translateY(-3px);
+}
+
+#teamCarousel .carousel-control-prev,
+#teamCarousel .carousel-control-next {
+    width: 8%;
+}
+
+#teamCarousel .carousel-control-prev-icon,
+#teamCarousel .carousel-control-next-icon {
+    background-color: rgb(17, 123, 117);
+    border-radius: 50%;
+    padding: 18px;
+    background-size: 55%;
+}
+
+#teamCarousel .carousel-indicators {
+    bottom: 0;
+}
+
+#teamCarousel .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgb(17, 123, 117);
+}
+
+.tab-content-card {
+    background-color: white;
+    border: 1px solid rgb(225, 235, 233);
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    padding: 30px;
+}
+
+.tab-content-card p,
+.tab-content-card li {
+    color: rgb(82, 107, 126);
+    line-height: 1.8;
+}
+
+.tab-image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.catalyst-table-container {
+    background-color: white;
+    border: 1px solid rgb(225, 235, 233);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(9, 24, 38, 0.04);
+}
+
+.catalyst-table thead {
+    background-color: rgb(13, 34, 53);
+    color: white;
+}
+
+.catalyst-table th {
+    padding: 15px;
+    font-size: 13px;
+}
+
+.catalyst-table td {
+    padding: 15px;
+    color: rgb(82, 107, 126);
+    vertical-align: middle;
+}
+
+.accordion-catalyst .accordion-item {
+    border: 1px solid rgb(225, 235, 233);
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.accordion-catalyst .accordion-button {
+    padding: 18px 20px;
+    color: rgb(13, 34, 53);
+    background-color: white;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.accordion-catalyst .accordion-button:not(.collapsed) {
+    background-color: rgb(225, 247, 243);
+    color: rgb(17, 123, 117);
+}
+
+.accordion-catalyst .accordion-body {
+    color: rgb(82, 107, 126);
+    line-height: 1.8;
+}
+
+.project-box {
+    background-color: rgb(13, 34, 53);
+    color: white;
+    padding: 45px 30px;
+    border-radius: 18px;
+}
+
+.project-box h2 {
+    color: white;
+}
+
+.project-box p {
+    color: rgb(210, 225, 235);
+    line-height: 1.8;
+}
+
+.reference-card {
+    height: 100%;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid rgb(225, 235, 233);
+    border-radius: 15px;
+    box-shadow: 0 5px 18px rgba(9, 24, 38, 0.04);
+}
+
+.reference-card p {
+    color: rgb(82, 107, 126);
+    line-height: 1.7;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 15px;
+}
+
+.modal-header {
+    background-color: rgb(13, 34, 53);
+    color: white;
+}
+
+.modal-body {
+    color: rgb(82, 107, 126);
+    line-height: 1.8;
+}
+
+.site-footer {
+    background-color: rgb(25, 54, 80);
+    color: white;
+    padding: 35px 0 18px;
+    margin-top: auto;
+}
+
+.footer-underline {
+    width: 45px;
+    height: 4px;
+    background-color: rgb(155, 183, 229);
+    margin-bottom: 17px;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-form input {
+    width: 100%;
+    max-width: 290px;
+    min-height: 48px;
+    padding: 11px 15px;
+    background-color: rgb(50, 96, 112);
+    border: 1px solid rgb(7, 28, 44);
+    border-radius: 10px;
+    color: white;
+}
+
+.footer-form input::placeholder {
+    color: rgb(215, 227, 232);
+}
+
+.footer-message {
+    color: rgb(212, 224, 236);
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 10px 0 14px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-top: 1px solid rgb(170, 190, 208);
+    margin-top: 28px;
+    padding-top: 18px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: rgb(240, 244, 250);
+    font-size: 13px;
+}
+
+@media (max-width: 991px) {
+    .hero-banner h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 55px 0;
+    }
+
+    .hero-banner {
+        padding: 55px 0;
+    }
+
+    .hero-banner h1 {
+        font-size: 34px;
+    }
+
+    .hero-image {
+        height: 260px;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .tab-content-card {
+        padding: 20px;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-member {
+        padding: 30px 20px;
+    }
+
+    .team-photo {
+        width: 155px;
+        height: 155px;
+    }
+
+    .team-member h3 {
+        font-size: 21px;
+    }
+
+    #teamCarousel .carousel-control-prev,
+    #teamCarousel .carousel-control-next {
+        width: 5%;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-banner h1 {
+        font-size: 29px;
+    }
+}

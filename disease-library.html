@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALYST | Disease Library</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalyst.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="image/photo_2026-10-20_20-15-20.jpg" alt="CATALYST logo">
+                <span class="logo-text">CATALYST</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Explore</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="disease-library.html">Disease Library</a></li>
+                            <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                            <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                            <li><a href="early-warning.html">Early Warning</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Stay Safe</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                            <li><a href="references.html">Medical References</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+        </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="mobile-label">Explore</li>
+                    <li><a href="disease-library.html">Disease Library</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                    <li><a href="early-warning.html">Early Warning</a></li>
+
+                    <li class="mobile-label">Stay Safe</li>
+                    <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                    <li><a href="references.html">Medical References</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+
+                    <li class="mobile-label">More</li>
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-auth" id="mobileAuth">
+                    <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                    <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-small">
+        <div class="wrap">
+            <span class="badge badge-dark">10 Core Diseases</span>
+            <h1>Disease Library</h1>
+            <p>
+                Ten infectious diseases, each with the latest Myanmar figures, how the infection spreads,
+                the warning signs, and how a family can prevent it.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search a disease, for example dengue or mosquito" onkeyup="searchDisease()">
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" type="button" onclick="filterDisease('all', this)">All Diseases</button>
+                <button class="filter-btn" type="button" onclick="filterDisease('Vector-Borne', this)">Vector-Borne</button>
+                <button class="filter-btn" type="button" onclick="filterDisease('Airborne', this)">Airborne</button>
+                <button class="filter-btn" type="button" onclick="filterDisease('Waterborne', this)">Waterborne</button>
+                <button class="filter-btn" type="button" onclick="filterDisease('Bloodborne', this)">Bloodborne</button>
+            </div>
+
+            <p class="result-count" id="resultCount">Showing 10 of 10 diseases.</p>
+
+            <div class="grid" id="diseaseList">
+
+                <div data-aos="zoom-in" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Vector-Borne</span>
+                        <h3>Dengue Fever</h3>
+                        <p>
+                            A viral infection spread by Aedes mosquitoes that bite during the
+                            day. Cases rise in Myanmar's rainy season.
+                        </p>
+                        <a href="dengue.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="100" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Vector-Borne</span>
+                        <h3>Malaria</h3>
+                        <p>
+                            A parasite infection spread by the female Anopheles mosquito at
+                            night. Cases are rising in Myanmar.                                                                             
+
+                        </p>
+                        <a href="malaria.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="200" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Airborne</span>
+                        <h3>Tuberculosis (TB)</h3>
+                        <p>
+                            A bacterial infection of the lungs spread through the air when a
+                            patient coughs. Myanmar has about 257,000 cases a year.
+                        </p>
+                        <a href="tuberculosis.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Airborne</span>
+                        <h3>Measles</h3>
+                        <p>
+                            A very contagious viral infection with fever and a red rash.
+                            Myanmar's vaccine was 71% in 2025, so gaps remain.
+                        </p>
+                        <a href="measles.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="100" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Airborne</span>
+                        <h3>Meningococcal Meningitis</h3>
+                        <p>
+                            A bacterial infection of the lining around the brain. A stiff neck
+                            and high fever mean the patient needs hospital care at once.
+                        </p>
+                        <a href="meningoccal-meningitis.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="200" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Airborne</span>
+                        <h3>Avian Flu (H5N1)</h3>
+                        <p>
+                            A bird virus that can infect people who touch sick poultry.
+                            Myanmar had its first human case in 2007.
+                        </p>
+                        <a href="avian-flu.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Waterborne</span>
+                        <h3>Cholera</h3>
+                        <p>
+                            A bacterial infection from unsafe water or food that causes
+                            a severe watery diarrhoea. An active outbreak through Yangon, August 2026.
+                        </p>
+                        <a href="cholera.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="100" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Vector-Borne</span>
+                        <h3>Yellow Fever</h3>
+                        <p>
+                            A mosquito-borne virus that damages the liver and turns the
+                            skin yellow. Not found in Myanmar, but travellers need a vaccine certificate.
+                        </p>
+                        <a href="yellow-fever.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" data-aos-delay="200" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Bloodborne</span>
+                        <h3>HIV and AIDS</h3>
+                        <p>
+                            A virus that weakens the immune system. Modern treatment keeps
+                            the virus low. Over 200,000 people in Myanmar are on treatment.
+                        </p>
+                        <a href="hiv-aids.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+                <div data-aos="zoom-in" class="card disease-card">
+                    <div class="card-body">
+                        <span class="card-tag">Bloodborne</span>
+                        <h3>Ebola and Marburg</h3>
+                        <p>
+                            Rare filoviruses spread through body fluids. No case has
+                            been reported in Myanmar. Imported risk comes from travel.
+                        </p>
+                        <a href="ebola-marburg.html" class="btn btn-outline btn-small">Read profile</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="disease-library.html">Disease Library</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                        <li><a href="early-warning.html">Early Warning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="hospital-directory.html">Hospital Directory</a></li>
+                        <li><a href="references.html">Medical References</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="about_us.html">About CATALYST</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="#" class="signin-link">Sign In</a></li>
+                        <li><a href="#" class="signup-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-underline"></div>
+                    <p>
+                        Knowledge creates awareness. Awareness creates change.
+                        Explore reliable information about infectious diseases and
+                        help build safer communities.
+                    </p>
+
+                    <form id="footerForm" class="footer-form">
+                        <label for="footerEmail" class="footer-hidden">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Enter your email">
+                        <button type="submit" class="nav-btn nav-btn-teal">Stay Informed</button>
+                    </form>
+
+                    <p id="footerMessage" class="footer-message">Reliable information. A healthier future.</p>
+
+                    <p>
+                        <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> |
+                        <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">MoHS Myanmar</a> |
+                        <a href="contact_us.html">Email us</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> CATALYST. All rights reserved.</p>
+                <nav>
+                    <a href="references.html">References</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="about_us.html">About</a>
+                    <a href="contact_us.html">Contact</a>
+                    <a href="#" class="signin-link">Sign In</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+
+    <script>
+
+        function searchDisease() {
+            let search = document.getElementById("searchInput").value;
+            search = search.toLowerCase().trim();
+
+            const cards = document.getElementsByClassName("disease-card");
+            let shown = 0;
+
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerHTML.toLowerCase();
+
+                if (text.includes(search)) {
+                    cards[i].style.display = "";
+                    shown = shown + 1;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            document.getElementById("resultCount").innerHTML =
+                "Showing " + shown + " of " + cards.length + " diseases.";
+        }
+
+        function filterDisease(category, button) {
+            const buttons = document.getElementsByClassName("filter-btn");
+
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            button.classList.add("active");
+
+            const cards = document.getElementsByClassName("disease-card");
+            let shown = 0;
+
+            for (let i = 0; i < cards.length; i++) {
+                let tag = cards[i].getElementsByClassName("card-tag")[0].innerHTML;
+
+                if (category == "all" || tag == category) {
+                    cards[i].style.display = "";
+                    shown = shown + 1;
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+
+            document.getElementById("searchInput").value = "";
+            document.getElementById("resultCount").innerHTML =
+                "Showing " + shown + " of " + cards.length + " diseases.";
+        }
+    </script>
+
+</body>
+</html>

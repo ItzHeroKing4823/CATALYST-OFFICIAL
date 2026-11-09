@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CATALYST | Book Care</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="catalyst-book-care.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="image/photo_2026-10-20_20-15-20.jpg" alt="CATALYST logo">
+                <span class="logo-text">CATALYST</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Explore</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="disease-library.html">Disease Library</a></li>
+                            <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                            <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                            <li><a href="early-warning.html">Early Warning</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Stay Safe</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                            <li><a href="references.html">Medical References</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+        </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="mobile-label">Explore</li>
+                    <li><a href="disease-library.html">Disease Library</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                    <li><a href="early-warning.html">Early Warning</a></li>
+
+                    <li class="mobile-label">Stay Safe</li>
+                    <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                    <li><a href="references.html">Medical References</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+
+                    <li class="mobile-label">More</li>
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-auth" id="mobileAuth">
+                    <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                    <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow-1">
+
+        <section class="page-hero text-center text-white">
+            <div class="container">
+                <span class="hero-label">
+                    <i class="bi bi-heart-pulse me-2"></i>CATALYST HEALTH SERVICES
+                </span>
+
+                <h1 class="display-4 fw-bold mt-3">Book Your Hospital Visit</h1>
+
+                <p class="lead mx-auto">
+                    Choose a hospital, share a few details and select a suitable appointment time.
+                </p>
+            </div>
+        </section>
+
+        <section class="container booking-section">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div data-aos="fade-up" class="booking-card">
+
+                        <div class="section-heading mb-4">
+                            <span class="step-number">01</span>
+                            <div>
+                                <h2 class="h4 mb-1">Patient information</h2>
+                                <p class="text-muted mb-0">
+                                    Please enter the patient's details carefully.
+                                </p>
+                            </div>
+                        </div>
+
+                        <form id="bookingForm">
+
+                            <div class="mb-3">
+                                <label for="hospitalSearch" class="form-label">
+                                    Search for a hospital
+                                </label>
+
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <i class="bi bi-search"></i>
+                                    </span>
+
+                                    <input
+                                        type="search"
+                                        class="form-control"
+                                        id="hospitalSearch"
+                                        placeholder="Type a hospital name..."
+                                        autocomplete="off">
+                                </div>
+
+                                <div class="form-text">
+                                    Search to find a hospital quickly.
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="hospital" class="form-label">
+                                    Choose a hospital <span class="text-danger">*</span>
+                                </label>
+
+                                <select class="form-select form-select-lg" id="hospital" required>
+                                    <option value="">Select a hospital</option>
+                                    <option>Yangon General Hospital (YGH)</option>
+                                    <option>SSC Specialist Hospital</option>
+                                    <option>Grand Hantha International</option>
+                                    <option>North Okkalapa General Hospital</option>
+                                    <option>Victoria Hospital</option>
+                                    <option>Pinlon Hospital</option>
+                                    <option>Yankin Children's Hospital</option>
+                                    <option>Asia Royal Hospital</option>
+                                    <option>Pun Hlaing Hospital</option>
+                                    <option>Thingangyun Sanpya Hospital</option>
+                                    <option>Arogya Hospital</option>
+                                    <option>Central Women's Hospital</option>
+                                    <option>Insein General Hospital</option>
+                                    <option>Sakura Hospital</option>
+                                    <option>Defense Services Hospital (DSGH)</option>
+                                    <option>Academy Hospital</option>
+                                    <option>Yangon Children's Hospital (Dagon)</option>
+                                    <option>OSC Hospital</option>
+                                    <option>Waibargi Infectious Disease Hospital</option>
+                                    <option>Arrawjan Specialist Hospital</option>
+                                    <option>Yangon ENT Hospital</option>
+                                    <option>West Yangon General Hospital</option>
+                                    <option>Muslim Free Hospital</option>
+                                    <option>Bahosi Hospital</option>
+                                    <option>Yangon Eye Hospital</option>
+                                    <option>Shwe Gon Daing Specialist Center</option>
+                                    <option>Yangon Orthopedic Hospital</option>
+                                    <option>Kanote Specialist Hospital</option>
+                                </select>
+
+                                <div class="form-text">
+                                    These are sample choices for the school project. Confirm hospital details before using this as a real service.
+                                </div>
+                            </div>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label for="patientName" class="form-label">
+                                        Patient's full name <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="patientName"
+                                        placeholder="Enter full name"
+                                        required>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="age" class="form-label">
+                                        Age <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input
+                                        type="number"
+                                        class="form-control"
+                                        id="age"
+                                        min="0"
+                                        max="120"
+                                        placeholder="Age"
+                                        required>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="dob" class="form-label">
+                                        Date of birth <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input type="date" class="form-control" id="dob" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">
+                                        Contact phone number <span class="text-danger">*</span>
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="phone"
+                                        placeholder="e.g. 09xxxxxxxxx"
+                                        required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="condition" class="form-label">
+                                        What condition do you think you may have?
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="condition"
+                                        placeholder="Your suspected condition (if known)">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="symptoms" class="form-label">
+                                        Symptoms you are experiencing <span class="text-danger">*</span>
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="symptoms"
+                                        rows="3"
+                                        placeholder="Describe the symptoms..."
+                                        required></textarea>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="duration" class="form-label">
+                                        How long have you had these symptoms? <span class="text-danger">*</span>
+                                    </label>
+
+                                    <select class="form-select" id="duration" required>
+                                        <option value="">Choose a duration</option>
+                                        <option>Less than 1 day</option>
+                                        <option>1–2 days</option>
+                                        <option>3–5 days</option>
+                                        <option>6–7 days</option>
+                                        <option>More than 1 week</option>
+                                        <option>More than 2 weeks</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="notes" class="form-label">
+                                        Additional notes <span class="text-muted">(optional)</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="notes"
+                                        placeholder="Anything else the hospital should know?">
+                                </div>
+
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div class="section-heading mb-3">
+                                <span class="step-number">02</span>
+
+                                <div>
+                                    <h2 class="h4 mb-1">Choose an appointment</h2>
+                                    <p class="text-muted mb-0">
+                                        Select a date and time for your planned visit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="row g-4">
+
+                                <div class="col-lg-7">
+                                    <div data-aos="fade-up" class="calendar-card">
+
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-light calendar-nav"
+                                                id="prevMonth"
+                                                aria-label="Previous month">
+                                                <i class="bi bi-chevron-left"></i>
+                                            </button>
+
+                                            <h3 class="h5 mb-0" id="calendarTitle"></h3>
+
+                                            <button
+                                                type="button"
+                                                class="btn btn-light calendar-nav"
+                                                id="nextMonth"
+                                                aria-label="Next month">
+                                                <i class="bi bi-chevron-right"></i>
+                                            </button>
+
+                                        </div>
+
+                                        <div class="calendar-grid calendar-weekdays">
+                                            <div>Sun</div>
+                                            <div>Mon</div>
+                                            <div>Tue</div>
+                                            <div>Wed</div>
+                                            <div>Thu</div>
+                                            <div>Fri</div>
+                                            <div>Sat</div>
+                                        </div>
+
+                                        <div class="calendar-grid" id="calendarDays"></div>
+
+                                        <div class="calendar-legend mt-3">
+                                            <span>
+                                                <i class="legend-dot selected-dot"></i>
+                                                Selected date
+                                            </span>
+
+                                            <span>
+                                                <i class="legend-dot booked-dot"></i>
+                                                Booked date
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-5">
+
+                                    <label for="appointmentDate" class="form-label">
+                                        Selected date
+                                    </label>
+
+                                    <input
+                                        type="date"
+                                        class="form-control mb-3"
+                                        id="appointmentDate"
+                                        required>
+
+                                    <label for="appointmentTime" class="form-label">
+                                        Appointment time <span class="text-danger">*</span>
+                                    </label>
+
+                                    <select class="form-select mb-3" id="appointmentTime" required>
+                                        <option value="">Choose a time</option>
+                                        <option>09:00 AM</option>
+                                        <option>10:00 AM</option>
+                                        <option>11:00 AM</option>
+                                        <option>01:00 PM</option>
+                                        <option>02:00 PM</option>
+                                        <option>03:00 PM</option>
+                                    </select>
+
+                                    <div class="appointment-note">
+                                        <i class="bi bi-info-circle me-2"></i>
+
+                                        This is a sample appointment planner. The selected time is not confirmed by the hospital.
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="form-check mt-4">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="confirmDetails"
+                                    required>
+
+                                <label class="form-check-label" for="confirmDetails">
+                                    I have checked the information and it is correct.
+                                </label>
+                            </div>
+
+                            <div class="d-flex flex-column flex-sm-row justify-content-end gap-2 mt-4">
+
+                                <button
+                                    type="reset"
+                                    class="btn btn-outline-secondary px-4"
+                                    id="cancelButton">
+                                    Cancel
+                                </button>
+
+                                <button type="submit" class="btn btn-teal px-4">
+                                    Book appointment
+                                    <i class="bi bi-arrow-right ms-1"></i>
+                                </button>
+
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="safety-note mt-4">
+                        <i class="bi bi-shield-exclamation fs-4"></i>
+
+                        <div>
+                            <strong>Important health notice</strong>
+
+                            <p class="mb-0">
+                                This form does not diagnose illnesses or replace a doctor's advice.
+                                If someone has severe difficulty breathing, chest pain, heavy bleeding
+                                or another medical emergency, seek emergency help immediately instead
+                                of waiting for an appointment.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="container pb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div data-aos="fade-up" class="reminder-card">
+
+                        <div class="d-flex flex-column flex-sm-row justify-content-between gap-2 align-items-sm-center mb-3">
+
+                            <div>
+                                <h2 class="h4 mb-1">
+                                    <i class="bi bi-calendar-check me-2"></i>
+                                    My appointment reminders
+                                </h2>
+
+                                <p class="text-muted mb-0">
+                                    Manage your appointments and check which ones you have completed.
+                                </p>
+                            </div>
+
+                            <span class="small text-muted">
+                                <i class="bi bi-cloud-check me-1"></i>
+                                Saved on this device
+                            </span>
+
+                        </div>
+
+                        <div class="appointment-summary mb-3">
+                            <div>
+                                <span id="totalAppointments">0</span>
+                                <small>Total</small>
+                            </div>
+
+                            <div>
+                                <span id="pendingAppointments">0</span>
+                                <small>Pending</small>
+                            </div>
+
+                            <div>
+                                <span id="completedAppointments">0</span>
+                                <small>Completed</small>
+                            </div>
+                        </div>
+
+                        <div id="reminderList" class="reminder-list">
+                            <p class="text-muted mb-0">
+                                You do not have any appointments yet.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div
+        class="modal fade"
+        id="bookingModal"
+        tabindex="-1"
+        aria-labelledby="bookingModalTitle"
+        aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content booking-slip">
+
+                <div class="modal-header border-0">
+
+                    <div>
+                        <span class="slip-label">
+                            CATALYST • BOOKING SUMMARY
+                        </span>
+
+                        <h2 class="modal-title h4 mt-1" id="bookingModalTitle">
+                            Appointment request saved
+                        </h2>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="slip-status">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Details recorded on this device
+                    </div>
+
+                    <div id="bookingSlipDetails"></div>
+
+                    <p class="small text-muted border-top pt-3 mt-3 mb-0">
+                        This is a demonstration booking slip, not an official hospital confirmation.
+                        Please contact the hospital to confirm availability. No price is displayed.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer border-0">
+
+                    <button
+                        type="button"
+                        class="btn btn-outline-secondary"
+                        data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                    <button type="button" class="btn btn-teal" id="printSlip">
+                        <i class="bi bi-printer me-1"></i>
+                        Print slip
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="disease-library.html">Disease Library</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                        <li><a href="early-warning.html">Early Warning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="hospital-directory.html">Hospital Directory</a></li>
+                        <li><a href="references.html">Medical References</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="about_us.html">About CATALYST</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="#" class="signin-link">Sign In</a></li>
+                        <li><a href="#" class="signup-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-underline"></div>
+                    <p>
+                        Knowledge creates awareness. Awareness creates change.
+                        Explore reliable information about infectious diseases and
+                        help build safer communities.
+                    </p>
+
+                    <form id="footerForm" class="footer-form">
+                        <label for="footerEmail" class="footer-hidden">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Enter your email">
+                        <button type="submit" class="nav-btn nav-btn-teal">Stay Informed</button>
+                    </form>
+
+                    <p id="footerMessage" class="footer-message">Reliable information. A healthier future.</p>
+
+                    <p>
+                        <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> |
+                        <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">MoHS Myanmar</a> |
+                        <a href="contact_us.html">Email us</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> CATALYST. All rights reserved.</p>
+                <nav>
+                    <a href="references.html">References</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="about_us.html">About</a>
+                    <a href="contact_us.html">Contact</a>
+                    <a href="#" class="signin-link">Sign In</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="catalyst-book-care.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

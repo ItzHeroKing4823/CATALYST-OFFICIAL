@@ -1,0 +1,704 @@
+/* Account page (Health Passport) */
+
+main {
+    min-height: 60vh;
+}
+
+/* Page basics */
+.logged-out {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.logged-out a {
+    color: #007f80;
+    font-weight: 700;
+}
+
+.btn-ghost {
+    background: none;
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.btn-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Passport card */
+.passport-section {
+    background-color: #e6edf2;
+    padding: 40px 0 70px;
+    border-bottom: 4px solid #00bdbe;
+}
+
+.passport-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 28px;
+    align-items: stretch;
+}
+
+.passport {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px 26px;
+    color: white;
+    border-radius: 18px;
+    border: 2px solid #00bdbe;
+    background:
+        repeating-radial-gradient(rgba(0, 189, 190, 0.09) 11px 12px),
+        linear-gradient(135deg, #091826, #0d2235 60%, #12405a);
+    box-shadow: 0 16px 36px rgba(13, 34, 53, 0.35);
+}
+
+.passport::after {
+    content: "";
+    position: absolute;
+    inset: 7px;
+    border: 1px dashed rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    pointer-events: none;
+}
+
+.passport-head {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #00bdbe;
+}
+
+.passport-body {
+    display: flex;
+    gap: 22px;
+    align-items: center;
+}
+
+.seal {
+    flex: none;
+    width: 112px;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 38px;
+    font-weight: 800;
+    color: #091826;
+    background: radial-gradient(circle, #6ff0f1, #00bdbe);
+    box-shadow: 0 0 0 5px #091826, 0 0 0 7px #00bdbe, 0 0 0 12px rgba(0, 189, 190, 0.25);
+    transform: rotate(-6deg);
+}
+
+.passport-fields {
+    min-width: 0;
+    flex: 1;
+}
+
+.field-label {
+    margin: 0;
+    color: #9fe9ea;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.passport h1 {
+    color: white;
+    font-size: 30px;
+    margin: 0 0 12px;
+    overflow-wrap: anywhere;
+}
+
+.passport dl {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 20px;
+    margin: 0;
+}
+
+.passport dt {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7fb3c7;
+}
+
+.passport dd {
+    margin: 0;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    font-size: 15px;
+}
+
+#memberNo {
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.passport-actions {
+    display: flex;
+    gap: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Area status card */
+.area-card {
+    background-color: white;
+    border-radius: 18px;
+    padding: 26px;
+    border-top: 6px solid #00bdbe;
+    box-shadow: 0 10px 26px rgba(13, 34, 53, 0.12);
+}
+
+.area-card h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.area-text {
+    color: #334155;
+    margin: 0 0 12px;
+}
+
+.area-advice {
+    background-color: #e6fafa;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #0d2235;
+    font-size: 15px;
+}
+
+.area-source {
+    margin: 10px 0 0;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.area-source a {
+    color: #007f80;
+    font-weight: 700;
+}
+
+/* Panels */
+.profile-body {
+    margin-top: -40px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.panel {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(13, 34, 53, 0.07);
+}
+
+.panel h2 {
+    font-size: 20px;
+    margin-bottom: 4px;
+}
+
+.panel-sub {
+    color: #64748b;
+    margin: 0 0 14px;
+    font-size: 15px;
+}
+
+.panel-note {
+    color: #64748b;
+    font-size: 13px;
+    margin: 12px 0 0;
+}
+
+.panel-note a {
+    color: #007f80;
+    font-weight: 700;
+}
+
+.two-panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.two-panels .panel {
+    margin-bottom: 24px;
+}
+
+/* Health calendar */
+.calendar {
+    display: grid;
+    grid-template-columns: 100px repeat(12, 1fr);
+    gap: 3px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.calendar .row-label {
+    text-align: left;
+    font-weight: 700;
+    color: #0d2235;
+    align-self: center;
+    font-size: 13px;
+}
+
+.calendar .month {
+    padding: 6px 0;
+    border-radius: 6px;
+    font-weight: 800;
+    color: #0d2235;
+}
+
+.calendar .month.hot {
+    background-color: #fde68a;
+}
+
+.calendar .month.rainy {
+    background-color: #bae6fd;
+}
+
+.calendar .month.cool {
+    background-color: #d1fae5;
+}
+
+.calendar .month.now {
+    outline: 3px solid #0d2235;
+}
+
+.calendar .cell {
+    height: 26px;
+    border-radius: 6px;
+    background-color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar .cell.on {
+    background-color: #fee2e2;
+}
+
+.calendar .cell.on::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #dc2626;
+}
+
+.calendar .cell.now {
+    outline: 3px solid #0d2235;
+}
+
+.calendar-key {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    padding: 0;
+    margin: 14px 0 0;
+    font-size: 13px;
+    color: #475569;
+}
+
+.swatch {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+    margin-right: 4px;
+    vertical-align: -1px;
+}
+
+.swatch.hot {
+    background-color: #fde68a;
+}
+
+.swatch.rainy {
+    background-color: #bae6fd;
+}
+
+.swatch.cool {
+    background-color: #d1fae5;
+}
+
+/* Checklist */
+.progress {
+    height: 10px;
+    background-color: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0 6px;
+}
+
+.progress div {
+    height: 100%;
+    width: 0;
+    background-color: #00bdbe;
+    transition: width 0.3s;
+}
+
+.checklist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.checklist li {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.checklist label {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #334155;
+    font-size: 15px;
+}
+
+.checklist input {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: #00bdbe;
+    flex: none;
+}
+
+.checklist input:checked + span {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+/* Appointments */
+.appointments {
+    list-style: none;
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+.appointment {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.appointment-date {
+    flex: none;
+    width: 56px;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #e6fafa;
+    color: #007f80;
+    line-height: 1.1;
+}
+
+.appointment-date strong {
+    display: block;
+    font-size: 22px;
+}
+
+.appointment-date span {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.appointment .reason {
+    display: block;
+    font-weight: 700;
+    color: #0d2235;
+}
+
+.appointment .when {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* Link tiles */
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 12px;
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    text-decoration: none;
+    color: #0d2235;
+}
+
+.tile strong {
+    font-size: 15px;
+}
+
+.tile span {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.tile:hover {
+    border-color: #00bdbe;
+    background-color: #f2fcfc;
+}
+
+/* Emergency and tip */
+.sos-panel {
+    background-color: #fff1f2;
+    border-left: 5px solid #dc2626;
+}
+
+.sos-panel h2 {
+    color: #b91c1c;
+}
+
+.sos-row {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 14px 0;
+}
+
+.sos-row a {
+    text-decoration: none;
+    color: #b91c1c;
+}
+
+.sos-row strong {
+    display: block;
+    font-size: 30px;
+}
+
+.sos-row span {
+    font-size: 13px;
+    color: #7f1d1d;
+}
+
+.sos-link {
+    color: #b91c1c;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.tip {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0d2235;
+}
+
+/* Edit dialog */
+.edit-dialog {
+    border: 0;
+    border-radius: 16px;
+    padding: 0;
+    width: min(440px, 92vw);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.edit-dialog::backdrop {
+    background-color: rgba(9, 24, 38, 0.65);
+}
+
+.edit-dialog form {
+    padding: 26px;
+}
+
+.edit-dialog label {
+    display: block;
+    font-weight: 700;
+    margin: 14px 0 6px;
+    color: #0d2235;
+}
+
+.edit-dialog input,
+.edit-dialog select {
+    width: 100%;
+    padding: 10px 12px;
+    font: inherit;
+    border: 2px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.edit-dialog input:focus,
+.edit-dialog select:focus {
+    outline: none;
+    border-color: #00bdbe;
+}
+
+.dialog-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+/* Small screen fixes */
+.passport-grid > *,
+.two-panels > *,
+.tiles > * {
+    min-width: 0;
+}
+
+.passport-actions {
+    flex-wrap: wrap;
+}
+
+#deleteBtn {
+    margin-top: 10px;
+}
+
+.calendar-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+}
+
+.calendar {
+    min-width: 560px;
+}
+
+.appointment > div {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.sos-row {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.login-banner {
+    background-color: #dcfce7;
+    border-bottom: 2px solid #16a34a;
+    color: #166534;
+    font-weight: 700;
+    padding: 12px 0;
+}
+
+.login-banner .wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-banner span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* Tablet and phone */
+@media (max-width: 900px) {
+    .passport-grid,
+    .two-panels {
+        grid-template-columns: 1fr;
+    }
+
+    .tiles {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .profile-body {
+        margin-top: -30px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .passport-section {
+        padding: 28px 0 60px;
+    }
+
+    .passport {
+        padding: 18px 16px;
+    }
+
+    .passport-head {
+        letter-spacing: 1px;
+        font-size: 11px;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .passport-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .seal {
+        width: 92px;
+        height: 92px;
+        font-size: 32px;
+    }
+
+    .passport h1 {
+        font-size: 24px;
+    }
+
+    .passport dl {
+        text-align: left;
+        gap: 10px 14px;
+    }
+
+    .passport-actions .btn {
+        flex: 1 1 130px;
+        text-align: center;
+    }
+
+    .area-card,
+    .panel {
+        padding: 18px 16px;
+    }
+
+    .area-card h2 {
+        font-size: 21px;
+    }
+
+    .tiles {
+        grid-template-columns: 1fr;
+    }
+
+    .tip {
+        font-size: 16px;
+    }
+
+    .sos-row strong {
+        font-size: 26px;
+    }
+
+    .edit-dialog form {
+        padding: 18px;
+    }
+
+    .dialog-buttons .btn {
+        flex: 1;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .passport dl {
+        grid-template-columns: 1fr;
+    }
+
+    .sos-row {
+        justify-content: center;
+    }
+
+}

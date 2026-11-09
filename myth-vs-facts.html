@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CATALYST | Myth vs Fact</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="myth-vs-fact.css" />
+      <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+  /* Carousel image sizing */
+    .catalyst-carousel .carousel-img-top {
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+    }
+    </style>
+</head>
+  <body class="d-flex flex-column min-vh-100">
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="image/photo_2026-10-20_20-15-20.jpg" alt="CATALYST logo">
+                <span class="logo-text">CATALYST</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Explore</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="disease-library.html">Disease Library</a></li>
+                            <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                            <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                            <li><a href="early-warning.html">Early Warning</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Stay Safe</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                            <li><a href="references.html">Medical References</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+        </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="mobile-label">Explore</li>
+                    <li><a href="disease-library.html">Disease Library</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                    <li><a href="early-warning.html">Early Warning</a></li>
+
+                    <li class="mobile-label">Stay Safe</li>
+                    <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                    <li><a href="references.html">Medical References</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+
+                    <li class="mobile-label">More</li>
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-auth" id="mobileAuth">
+                    <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                    <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-expanded text-white position-relative overflow-hidden">
+      <div
+        class="container py-4 text-center position-relative z-1"
+
+      >
+        <span
+          class="badge bg-teal-accent text-navy-950 rounded-pill px-4 py-2 text-uppercase fw-extrabold text-xs mb-3 shadow-sm"
+        >
+          <i class="fa-solid fa-shield-virus me-2"></i> Myanmar Epidemic
+          Intelligence Bureau
+        </span>
+
+        <h1
+          class="display-3 fw-black text-white mb-3"
+          style="font-weight: 900; letter-spacing: -1.5px"
+        >
+          MYTH VS. <span class="text-teal-accent">CLINICAL FACT</span>
+        </h1>
+
+        <p
+          class="lead text-light max-w-3xl mx-auto fs-5 opacity-90 leading-relaxed mb-5"
+        >
+          Evidence-based epidemiological tracking, vector-borne disease
+          analysis, and clinical verification protocols aligned with Myanmar
+          public health standards and global standards.
+        </p>
+
+        <div
+          class="row g-3 justify-content-center max-w-4xl mx-auto text-start"
+        >
+          <div class="col-6 col-md-3">
+            <div
+              class="p-3 rounded-3 bg-navy-900 bg-opacity-90 border border-secondary border-opacity-25 text-center"
+            >
+              <div class="text-teal-accent fs-3 fw-black">Monsoon</div>
+              <div class="text-light text-xs opacity-75">
+                Active Vector Watch
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div
+              class="p-3 rounded-3 bg-navy-900 bg-opacity-90 border border-secondary border-opacity-25 text-center"
+            >
+              <div class="text-teal-accent fs-3 fw-black">WHO / MoH</div>
+              <div class="text-light text-xs opacity-75">
+                Clinical Guidelines
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div
+              class="p-3 rounded-3 bg-navy-900 bg-opacity-90 border border-secondary border-opacity-25 text-center"
+            >
+              <div class="text-teal-accent fs-3 fw-black">15 Mapped</div>
+              <div class="text-light text-xs opacity-75">
+                Myanmar States &amp; Regions
+              </div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div
+              class="p-3 rounded-3 bg-navy-900 bg-opacity-90 border border-secondary border-opacity-25 text-center"
+            >
+              <div class="text-teal-accent fs-3 fw-black">Nov 2026</div>
+              <div class="text-light text-xs opacity-75">Last Reviewed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main class="container my-5 flex-grow-1">
+      <div class="text-center mb-5">
+        <span
+          class="text-teal-accent font-monospace text-xs text-uppercase fw-bold"
+          >Epidemiological Audit</span
+        >
+        <h2 class="display-6 fw-extrabold text-navy-900 mt-1">
+          Clinical Misconceptions vs. Verified Facts Matrix
+        </h2>
+        <div
+          class="bg-teal-accent mx-auto mt-2 rounded-pill"
+          style="width: 60px; height: 4px"
+        ></div>
+      </div>
+
+      <div data-aos="fade-up" class="epidemic-table-container mb-5">
+        <div class="table-responsive">
+          <table class="table mb-0 align-middle">
+            <thead>
+              <tr>
+                <th style="width: 15%">Disease / Category</th>
+                <th style="width: 35%">Spoken Rumor / Myth</th>
+                <th style="width: 35%">Verified Clinical Fact</th>
+                <th style="width: 15%">Authoritative Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fw-bold text-navy-900">
+                  <i class="fa-solid fa-mosquito text-danger me-1"></i> Dengue
+                  Virus
+                </td>
+                <td>
+                  <span class="myth-badge-cell text-xs mb-2">MYTH</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Raw papaya leaf juice can cure Dengue and rapidly restore
+                    falling blood platelets without hospital IV fluids.
+                  </p>
+                </td>
+                <td>
+                  <span class="fact-badge-cell text-xs mb-2">FACT</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    No herbal cure destroys Dengue RNA. Clinical management
+                    requires strict intravenous fluid balance and platelet
+                    monitoring in hospitals.
+                  </p>
+                </td>
+                <td class="text-xs text-muted fw-semibold">
+                  WHO & MoH Myanmar
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-navy-900">
+                  <i class="fa-solid fa-pills text-warning me-1"></i> Influenza
+                  / Flu
+                </td>
+                <td>
+                  <span class="myth-badge-cell text-xs mb-2">MYTH</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Buying and taking strong over-the-counter antibiotics
+                    immediately cures acute viral flu and fevers.
+                  </p>
+                </td>
+                <td>
+                  <span class="fact-badge-cell text-xs mb-2">FACT</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Antibiotics target bacteria exclusively. Misusing them for
+                    viral influenza fuels global Antimicrobial Resistance (AMR).
+                  </p>
+                </td>
+                <td class="text-xs text-muted fw-semibold">
+                  National Health Lab
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-navy-900">
+                  <i class="fa-solid fa-lungs text-info me-1"></i> Tuberculosis
+                </td>
+                <td>
+                  <span class="myth-badge-cell text-xs mb-2">MYTH</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Tuberculosis (TB) is a hereditary family curse passed down
+                    through bloodlines.
+                  </p>
+                </td>
+                <td>
+                  <span class="fact-badge-cell text-xs mb-2">FACT</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    TB is a contagious airborne bacterial infection transmitted
+                    via droplets. It is 100% curable with standard DOTS courses.
+                  </p>
+                </td>
+                <td class="text-xs text-muted fw-semibold">
+                  National TB Program
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-navy-900">
+                  <i class="fa-solid fa-bug text-success me-1"></i> Malaria
+                </td>
+                <td>
+                  <span class="myth-badge-cell text-xs mb-2">MYTH</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Surviving Malaria once in forest zones gives you permanent
+                    lifetime immunity.
+                  </p>
+                </td>
+                <td>
+                  <span class="fact-badge-cell text-xs mb-2">FACT</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Immunity wanes rapidly. Multiple parasite species exist; bed
+                    nets and diagnostic testing remain critical.
+                  </p>
+                </td>
+                <td class="text-xs text-muted fw-semibold">
+                  Vector Borne Control
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-navy-900">
+                  <i class="fa-solid fa-droplet text-primary me-1"></i> Typhoid
+                </td>
+                <td>
+                  <span class="myth-badge-cell text-xs mb-2">MYTH</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Typhoid fever is caused simply by eating spicy street food
+                    or working under the sun.
+                  </p>
+                </td>
+                <td>
+                  <span class="fact-badge-cell text-xs mb-2">FACT</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Typhoid results strictly from
+                    <em>Salmonella Typhi</em> ingested via contaminated water or
+                    fecal matter.
+                  </p>
+                </td>
+                <td class="text-xs text-muted fw-semibold">
+                  Environmental Health
+                </td>
+              </tr>
+              <tr>
+                <td class="fw-bold text-navy-900">
+                  <i class="fa-solid fa-syringe text-purple me-1"></i> Vaccines
+                </td>
+                <td>
+                  <span class="myth-badge-cell text-xs mb-2">MYTH</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    Modern vaccines alter your personal cellular DNA
+                    permanently.
+                  </p>
+                </td>
+                <td>
+                  <span class="fact-badge-cell text-xs mb-2">FACT</span>
+                  <p class="mb-0 text-xs text-dark leading-relaxed">
+                    mRNA and vector components never enter the cell nucleus
+                    where DNA resides; they decompose within hours.
+                  </p>
+                </td>
+                <td class="text-xs text-muted fw-semibold">EPI Myanmar</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <section class="my-5 pt-3" data-aos="fade-up">
+        <div class="d-flex justify-content-between align-items-end mb-4">
+          <div>
+            <span class="text-teal-accent font-monospace text-xs text-uppercase fw-bold">
+              Community Awareness &amp; Preparedness
+            </span>
+            <h2 class="display-6 fw-extrabold text-navy-900 mt-1">
+              Building a More Prepared Yangon
+            </h2>
+          </div>
+        </div>
+
+        <div id="researchCarousel" class="carousel slide catalyst-carousel" data-bs-ride="false">
+          <div class="carousel-inner">
+
+            <!-- Slide 1: Community Awareness -->
+            <div class="carousel-item active">
+              <div class="carousel-item-card row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="https://images.pexels.com/photos/5327864/pexels-photo-5327864.jpeg?auto=compress&dpr=1&h=750&w=1260"
+                    alt="Healthcare professional discussing health information with a patient"
+                    class="carousel-img-top" />
+                </div>
+                <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                  <span class="badge bg-navy-900 text-teal-accent rounded-pill align-self-start mb-3">
+                    Community Awareness
+                  </span>
+                  <h3 class="h4 fw-bold text-navy-900 mb-2">
+                    Understanding Epidemic Risks
+                  </h3>
+                  <p class="text-muted mb-3">
+                    Learn about major infectious diseases that may affect Yangon,
+                    how they spread, their warning signs and the communities
+                    that may face greater risks.
+                  </p>
+                  <div class="text-teal-accent fw-bold">
+                    <i class="fa-solid fa-book-medical me-1"></i>
+                    Knowledge for Everyone
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Disease Prevention -->
+            <div class="carousel-item">
+              <div class="carousel-item-card row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="https://images.pexels.com/photos/4308205/pexels-photo-4308205.jpeg?auto=compress&dpr=1&h=750&w=1260"
+                    alt="Person washing hands with soap to prevent infections"
+                    class="carousel-img-top" />
+                </div>
+                <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                  <span class="badge bg-navy-900 text-teal-accent rounded-pill align-self-start mb-3">
+                    Disease Prevention
+                  </span>
+                  <h3 class="h4 fw-bold text-navy-900 mb-2">
+                    Preventing the Spread of Infection
+                  </h3>
+                  <p class="text-muted mb-3">
+                    Discover practical ways to reduce infection risks, including
+                    proper handwashing, safe food and water practices,
+                    vaccination and other disease-specific precautions.
+                  </p>
+                  <div class="text-teal-accent fw-bold">
+                    <i class="fa-solid fa-shield-virus me-1"></i>
+                    Prevention Starts With Us
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Emergency Preparedness -->
+            <div class="carousel-item">
+              <div class="carousel-item-card row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="https://images.pexels.com/photos/31837694/pexels-photo-31837694/free-photo-of-comprehensive-first-aid-kit-with-medical-supplies.jpeg?auto=compress&dpr=1&h=750&w=1260"
+                    alt="First aid kit containing emergency medical supplies"
+                    class="carousel-img-top" />
+                </div>
+                <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                  <span class="badge bg-navy-900 text-teal-accent rounded-pill align-self-start mb-3">
+                    Emergency Preparedness
+                  </span>
+                  <h3 class="h4 fw-bold text-navy-900 mb-2">
+                    Knowing What to Do During an Outbreak
+                  </h3>
+                  <p class="text-muted mb-3">
+                    Help families prepare before an outbreak by learning
+                    essential safety measures, recognising symptoms, finding
+                    healthcare facilities and knowing when to seek medical help.
+                  </p>
+                  <div class="text-teal-accent fw-bold">
+                    <i class="fa-solid fa-kit-medical me-1"></i>
+                    Ready Before an Emergency
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Early Warning System -->
+            <div class="carousel-item">
+              <div class="carousel-item-card row g-0">
+                <div class="col-md-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&fm=jpg&q=80&w=1200"
+                    alt="Digital data dashboard displayed on a computer screen"
+                    class="carousel-img-top" />
+                </div>
+                <div class="col-md-6 p-4 p-lg-5 d-flex flex-column justify-content-center">
+                  <span class="badge bg-navy-900 text-teal-accent rounded-pill align-self-start mb-3">
+                    Early Warning System
+                  </span>
+                  <h3 class="h4 fw-bold text-navy-900 mb-2">
+                    Staying Informed Across Yangon
+                  </h3>
+                  <p class="text-muted mb-3">
+                    Access township-based health updates, understand reported
+                    disease activity and follow recommended precautions.
+                    Reliable information can help communities respond earlier.
+                  </p>
+                  <div class="text-teal-accent fw-bold">
+                    <i class="fa-solid fa-bell me-1"></i>
+                    Awareness Through Timely Updates
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Carousel Indicators -->
+          <div class="carousel-indicators carousel-dots">
+            <button type="button" data-bs-target="#researchCarousel"
+              data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#researchCarousel"
+              data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#researchCarousel"
+              data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#researchCarousel"
+              data-bs-slide-to="3" aria-label="Slide 4"></button>
+          </div>
+
+          <!-- Previous Button -->
+          <button class="carousel-control-prev" type="button"
+            data-bs-target="#researchCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+
+          <!-- Next Button -->
+          <button class="carousel-control-next" type="button"
+            data-bs-target="#researchCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="mt-5 pt-4">
+        <div class="text-center max-w-2xl mx-auto mb-5">
+          <span
+            class="text-teal-accent font-monospace text-xs text-uppercase fw-bold"
+            >Public Verification Protocol</span
+          >
+          <h2 class="display-6 fw-extrabold text-navy-900 mt-1">
+            4 Steps to Verify Online Health Claims
+          </h2>
+          <p class="text-muted text-xs">
+            Protect your household from dangerous viral medical rumors by
+            evaluating information with this structured 4-step framework.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div
+            class="col-md-6 col-lg-3"
+
+          >
+            <div data-aos="zoom-in"
+              class="verification-step-card p-4 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
+                  <span class="fs-4 fw-black text-teal-accent">01</span>
+                  <div
+                    class="bg-navy-900 text-teal-accent rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                    style="width: 44px; height: 44px"
+                  >
+                    <i class="fa-solid fa-building-shield text-xs"></i>
+                  </div>
+                </div>
+                <span
+                  class="badge bg-light text-navy-900 border mb-2 text-[10px] fw-bold uppercase"
+                  >Institutional Source</span
+                >
+                <h3 class="h6 fw-bold text-navy-900 mb-2">
+                  Check Source Authority
+                </h3>
+                <p class="text-muted text-xs leading-relaxed mb-4">
+                  Confirm whether claims originate from accredited bodies (WHO
+                  Myanmar, Ministry of Health and Sports) or peer-reviewed journals, rather
+                  than unverified social posts.
+                </p>
+              </div>
+              <a
+                href="https://www.who.int"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border-top pt-3 d-flex align-items-center justify-content-between text-teal-accent text-xs fw-bold text-decoration-none"
+              >
+                <span>Verify Authority</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-3"
+
+          >
+            <div data-aos="zoom-in" data-aos-delay="100"
+              class="verification-step-card p-4 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
+                  <span class="fs-4 fw-black text-teal-accent">02</span>
+                  <div
+                    class="bg-navy-900 text-teal-accent rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                    style="width: 44px; height: 44px"
+                  >
+                    <i class="fa-solid fa-triangle-exclamation text-xs"></i>
+                  </div>
+                </div>
+                <span
+                  class="badge bg-light text-navy-900 border mb-2 text-[10px] fw-bold uppercase"
+                  >Language Audit</span
+                >
+                <h3 class="h6 fw-bold text-navy-900 mb-2">
+                  Spot "Miracle" Claims
+                </h3>
+                <p class="text-muted text-xs leading-relaxed mb-4">
+                  Exercise caution with posts promising "100% secret home cures"
+                  or instant remedies for complex viral infections.
+                </p>
+              </div>
+              <a
+                href="https://www.mohs.gov.mm/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border-top pt-3 d-flex align-items-center justify-content-between text-teal-accent text-xs fw-bold text-decoration-none"
+              >
+                <span>Detect Sensationalism</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-3"
+
+          >
+            <div data-aos="zoom-in" data-aos-delay="200"
+              class="verification-step-card p-4 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
+                  <span class="fs-4 fw-black text-teal-accent">03</span>
+                  <div
+                    class="bg-navy-900 text-teal-accent rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                    style="width: 44px; height: 44px"
+                  >
+                    <i class="fa-solid fa-code-compare text-xs"></i>
+                  </div>
+                </div>
+                <span
+                  class="badge bg-light text-navy-900 border mb-2 text-[10px] fw-bold uppercase"
+                  >Evidence Match</span
+                >
+                <h3 class="h6 fw-bold text-navy-900 mb-2">
+                  Cross-Reference Data
+                </h3>
+                <p class="text-muted text-xs leading-relaxed mb-4">
+                  Verify recommendations across multiple independent clinical
+                  institutions before trying untested remedies or stopping
+                  prescribed treatments.
+                </p>
+              </div>
+              <a
+                href="https://www.who.int/countries/mmr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border-top pt-3 d-flex align-items-center justify-content-between text-teal-accent text-xs fw-bold text-decoration-none"
+              >
+                <span>Cross-Check Facts</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+
+          <div
+            class="col-md-6 col-lg-3"
+
+          >
+            <div data-aos="zoom-in"
+              class="verification-step-card p-4 h-100 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <div
+                  class="d-flex align-items-center justify-content-between mb-3"
+                >
+                  <span class="fs-4 fw-black text-teal-accent">04</span>
+                  <div
+                    class="bg-navy-900 text-teal-accent rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                    style="width: 44px; height: 44px"
+                  >
+                    <i class="fa-solid fa-user-doctor text-xs"></i>
+                  </div>
+                </div>
+                <span
+                  class="badge bg-light text-navy-900 border mb-2 text-[10px] fw-bold uppercase"
+                  >Medical Advice</span
+                >
+                <h3 class="h6 fw-bold text-navy-900 mb-2">
+                  Consult Registered Doctors
+                </h3>
+                <p class="text-muted text-xs leading-relaxed mb-4">
+                  When experiencing persistent fever or respiratory illness,
+                  seek immediate consultation at a township hospital or verified
+                  healthcare facility.
+                </p>
+              </div>
+              <a
+                href="https://www.mmacommission.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="border-top pt-3 d-flex align-items-center justify-content-between text-teal-accent text-xs fw-bold text-decoration-none"
+              >
+                <span>Seek Clinical Care</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+<footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="disease-library.html">Disease Library</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                        <li><a href="early-warning.html">Early Warning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="hospital-directory.html">Hospital Directory</a></li>
+                        <li><a href="references.html">Medical References</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="about_us.html">About CATALYST</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="#" class="signin-link">Sign In</a></li>
+                        <li><a href="#" class="signup-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-underline"></div>
+                    <p>
+                        Knowledge creates awareness. Awareness creates change.
+                        Explore reliable information about infectious diseases and
+                        help build safer communities.
+                    </p>
+
+                    <form id="footerForm" class="footer-form">
+                        <label for="footerEmail" class="footer-hidden">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Enter your email">
+                        <button type="submit" class="nav-btn nav-btn-teal">Stay Informed</button>
+                    </form>
+
+                    <p id="footerMessage" class="footer-message">Reliable information. A healthier future.</p>
+
+                    <p>
+                        <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> |
+                        <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">MoHS Myanmar</a> |
+                        <a href="contact_us.html">Email us</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> CATALYST. All rights reserved.</p>
+                <nav>
+                    <a href="references.html">References</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="about_us.html">About</a>
+                    <a href="contact_us.html">Contact</a>
+                    <a href="#" class="signin-link">Sign In</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>

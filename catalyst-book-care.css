@@ -1,0 +1,468 @@
+:root {
+    --navy: rgb(10, 31, 51);
+    --navy-light: rgb(18, 48, 70);
+    --teal: rgb(0, 189, 190);
+    --text: rgb(35, 53, 68);
+    --muted: rgb(105, 120, 132);
+    --background: rgb(246, 249, 251);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--text);
+    background: var(--background);
+}
+
+header {
+    z-index: 1000;
+}
+
+.nav-dropdown-menu {
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu {
+    color: white;
+    background: var(--navy);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 4px 0;
+}
+
+.btn-teal {
+    color: var(--navy);
+    background: var(--teal);
+    border: 1px solid var(--teal);
+    font-weight: 700;
+}
+
+.btn-teal:hover {
+    color: white;
+    background: rgb(0, 153, 158);
+    border-color: rgb(0, 153, 158);
+}
+
+.page-hero {
+    padding: 155px 0 75px;
+    background: linear-gradient(130deg, rgb(8, 29, 49), rgb(16, 65, 83));
+}
+
+.page-hero p {
+    max-width: 650px;
+    color: rgb(220, 233, 239);
+}
+
+.hero-label {
+    display: inline-block;
+    padding: 8px 15px;
+    border: 1px solid rgba(0, 189, 190, 0.5);
+    border-radius: 30px;
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.booking-section {
+    padding-top: 55px;
+    padding-bottom: 35px;
+}
+
+.booking-card,
+.reminder-card {
+    padding: 32px;
+    background: white;
+    border: 1px solid rgb(229, 235, 239);
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(20, 50, 70, 0.06);
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.step-number {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: var(--navy);
+    background: rgba(0, 189, 190, 0.16);
+    border-radius: 12px;
+    font-weight: 800;
+}
+
+.form-label {
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.form-control,
+.form-select {
+    min-height: 45px;
+    border-color: rgb(218, 226, 231);
+    border-radius: 9px;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 0.2rem rgba(0, 189, 190, 0.13);
+}
+
+textarea.form-control {
+    min-height: 100px;
+}
+
+.input-group-text {
+    color: var(--muted);
+    background: rgb(248, 251, 252);
+    border-color: rgb(218, 226, 231);
+    border-radius: 9px 0 0 9px;
+}
+
+.input-group .form-control {
+    border-radius: 0 9px 9px 0;
+}
+
+.input-group:focus-within .input-group-text {
+    color: rgb(0, 153, 158);
+    border-color: var(--teal);
+}
+
+.calendar-card {
+    padding: 20px;
+    border: 1px solid rgb(229, 235, 239);
+    border-radius: 14px;
+    background: rgb(251, 253, 254);
+}
+
+.calendar-nav {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 9px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    text-align: center;
+}
+
+.calendar-weekdays {
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.calendar-day {
+    min-height: 38px;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: var(--text);
+    font-size: 13px;
+}
+
+.calendar-day:hover:not(:disabled) {
+    background: rgba(0, 189, 190, 0.13);
+}
+
+.calendar-day:disabled {
+    color: rgb(190, 199, 205);
+    cursor: not-allowed;
+}
+
+.calendar-day.selected {
+    color: var(--navy);
+    background: var(--teal);
+    font-weight: 800;
+}
+
+.calendar-day.has-booking {
+    border: 1px solid rgb(0, 153, 158);
+}
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 4px;
+    border-radius: 50%;
+}
+
+.selected-dot {
+    background: var(--teal);
+}
+
+.booked-dot {
+    border: 1px solid rgb(0, 153, 158);
+}
+
+.appointment-note,
+.safety-note {
+    display: flex;
+    gap: 10px;
+    padding: 14px;
+    color: rgb(48, 87, 104);
+    background: rgb(235, 248, 249);
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.safety-note {
+    align-items: flex-start;
+    padding: 18px;
+    color: rgb(95, 75, 28);
+    background: rgb(255, 248, 226);
+}
+
+.safety-note p {
+    font-size: 13px;
+}
+
+.reminder-card {
+    padding: 26px 30px;
+}
+
+.reminder-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 0;
+    border-top: 1px solid rgb(232, 237, 240);
+}
+
+.reminder-item strong {
+    color: var(--navy);
+}
+
+.reminder-details {
+    min-width: 0;
+    flex: 1;
+}
+
+.reminder-details div {
+    margin-top: 3px;
+}
+
+.reminder-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.reminder-actions .btn {
+    font-size: 12px;
+}
+
+.reminder-check {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--text);
+    font-size: 13px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.reminder-check input {
+    width: 17px;
+    height: 17px;
+    accent-color: rgb(0, 153, 158);
+    cursor: pointer;
+}
+
+.reminder-item.completed .reminder-details strong,
+.reminder-item.completed .reminder-details div {
+    color: var(--muted);
+}
+
+.reminder-item.completed .reminder-details strong {
+    text-decoration: line-through;
+}
+
+.reminder-status {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.pending-status {
+    color: rgb(143, 96, 14);
+    background: rgb(255, 244, 215);
+}
+
+.completed-status {
+    color: rgb(0, 112, 92);
+    background: rgb(230, 248, 242);
+}
+
+.appointment-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.appointment-summary div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 8px;
+    background: rgb(245, 249, 251);
+    border: 1px solid rgb(229, 235, 239);
+    border-radius: 10px;
+}
+
+.appointment-summary span {
+    color: var(--navy);
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.appointment-summary small {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.booking-slip {
+    border: 0;
+    border-radius: 16px;
+}
+
+.slip-label {
+    color: rgb(0, 145, 150);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.slip-status {
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    color: rgb(0, 112, 92);
+    background: rgb(230, 248, 242);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 650;
+}
+
+.slip-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 9px 0;
+    border-bottom: 1px dashed rgb(220, 228, 232);
+    font-size: 13px;
+}
+
+.slip-row span:first-child {
+    color: var(--muted);
+}
+
+.slip-row strong {
+    max-width: 62%;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 575px) {
+    .page-hero {
+        padding: 135px 0 55px;
+    }
+
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .booking-card {
+        padding: 20px;
+    }
+
+    .calendar-card {
+        padding: 13px;
+    }
+
+    .calendar-grid {
+        gap: 3px;
+    }
+
+    .calendar-day {
+        min-height: 34px;
+    }
+
+    .reminder-card {
+        padding: 20px;
+    }
+
+    .reminder-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .reminder-actions {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .appointment-summary {
+        gap: 7px;
+    }
+
+    .appointment-summary span {
+        font-size: 19px;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .booking-slip,
+    .booking-slip * {
+        visibility: visible;
+    }
+
+    .booking-slip {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    .modal-header .btn-close,
+    .modal-footer {
+        display: none !important;
+    }
+}

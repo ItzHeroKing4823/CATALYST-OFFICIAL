@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATALYST | Yangon Early Warning</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="catalyst.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="early-warning.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="wrap header-inner">
+
+            <a href="index.html" class="logo">
+                <img src="image/photo_2026-10-20_20-15-20.jpg" alt="CATALYST logo">
+                <span class="logo-text">CATALYST</span>
+            </a>
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Explore</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="disease-library.html">Disease Library</a></li>
+                            <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                            <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                            <li><a href="early-warning.html">Early Warning</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-dropdown">
+                        <a href="#" class="nav-drop-link">Stay Safe</a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                            <li><a href="references.html">Medical References</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-buttons" id="headerButtons">
+                <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+            </div>
+
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu">&#9776;</button>
+        </div>
+
+                <div class="mobile-menu" id="mobileMenu">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="mobile-label">Explore</li>
+                    <li><a href="disease-library.html">Disease Library</a></li>
+                    <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                    <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                    <li><a href="early-warning.html">Early Warning</a></li>
+
+                    <li class="mobile-label">Stay Safe</li>
+                    <li><a href="hospital-directory.html">Yangon Hospital Directory</a></li>
+                    <li><a href="references.html">Medical References</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+
+                    <li class="mobile-label">More</li>
+                    <li><a href="catalyst-book-care.html">Book Care</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="contact_us.html">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-auth" id="mobileAuth">
+                    <a href="#" class="nav-btn nav-btn-white signin-link">Sign In</a>
+                    <a href="#" class="nav-btn nav-btn-teal signup-link">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-small">
+        <div class="wrap">
+            <span class="badge badge-dark">Yangon Early Warning System</span>
+            <h1>Yangon Township Early Warning</h1>
+            <p>
+                Choose your township to see disease warnings, risk levels and what you can do to stay safe.
+                This is a school project (CATALYST) about epidemic awareness in Myanmar.
+            </p>
+        </div>
+    </section>
+
+    <section class="section ew-first">
+        <div class="wrap">
+
+            <div class="ew-disclaimer" role="note">
+                <strong>Please read:</strong> This is an educational page. It is <strong>not</strong> an official disease
+                surveillance system and it is <strong>not a live feed</strong>. Every warning here comes from a real report,
+                and each one shows its source link and date. Health authorities in Myanmar publish few township numbers,
+                so we show only what was published and say when a number is missing. Always follow instructions from the
+                <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">Ministry of Health</a>
+                and your local health workers.
+            </div>
+
+            <p class="ew-note" id="dataMode"></p>
+
+            <h2 class="ew-heading">Dashboard Overview</h2>
+            <div class="dash-grid">
+                <div class="dash-card"><span class="dash-number" id="totalAlerts">0</span><span class="dash-label">Active alerts</span></div>
+                <div class="dash-card dash-high"><span class="dash-number" id="highTownships">0</span><span class="dash-label">High-risk townships<br><small>(High or Critical)</small></span></div>
+                <div class="dash-card dash-moderate"><span class="dash-number" id="regionNotices">0</span><span class="dash-label">Yangon-wide notices</span></div>
+                <div class="dash-card"><span class="dash-text" id="lastUpdated">-</span><span class="dash-label">Newest report date</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-grey">
+        <div class="wrap">
+            <h2 class="ew-heading">Choose Your Township</h2>
+            <div class="picker-layout">
+
+                <div class="picker-box">
+                    <label for="townshipSearch" class="ew-label">1. Type to search (33 townships)</label>
+                    <input type="text" id="townshipSearch" placeholder="For example: Latha" autocomplete="off">
+                    <label for="townshipSelect" class="ew-label">2. Pick from the list</label>
+                    <select id="townshipSelect" size="7" aria-label="Yangon townships"></select>
+                    <p class="ew-note" id="townshipCount"></p>
+                    <p class="ew-note" id="townshipHint">Tip: <a href="#" class="signup-link">create an account</a> to save your home township.</p>
+                </div>
+
+                <div class="township-panel" id="townshipPanel" aria-live="polite">
+                    <p id="townshipStart">Select a township to see its risk level and warnings.</p>
+                    <div id="townshipInfo" hidden>
+                        <div class="panel-top">
+                            <h3 id="townshipName"></h3>
+                            <span class="risk-badge" id="townshipRisk"></span>
+                        </div>
+                        <dl class="panel-facts">
+                            <div><dt>Diseases reported or monitored</dt><dd id="townshipDiseases"></dd></div>
+                            <div><dt>Verified case numbers</dt><dd id="townshipCases"></dd></div>
+                            <div><dt>Last update</dt><dd id="townshipDate"></dd></div>
+                        </dl>
+                        <p class="panel-why" id="townshipWhy"></p>
+                        <p>
+                            <a id="hospitalLink" href="hospital-directory.html" class="btn btn-navy btn-small">Find hospitals</a>
+                            <a href="symptom-checker.html" class="btn btn-outline btn-small">Check my symptoms</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+            <h2 class="ew-heading">Disease Alerts for <span id="alertTownship">Your Township</span></h2>
+            <p class="ew-note" id="alertCardsNote"></p>
+            <div class="alert-grid" id="alertCards"></div>
+        </div>
+    </section>
+
+    <section class="section section-grey">
+        <div class="wrap">
+            <h2 class="ew-heading">Recent Reports and Notices</h2>
+            <div class="filter-row">
+                <div>
+                    <label for="filterTownship" class="ew-label">Township</label>
+                    <select id="filterTownship"></select>
+                </div>
+                <div>
+                    <label for="filterDisease" class="ew-label">Disease</label>
+                    <select id="filterDisease"></select>
+                </div>
+                <div>
+                    <label for="filterRisk" class="ew-label">Risk level</label>
+                    <select id="filterRisk"></select>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-outline btn-small" id="clearFilters">Clear filters</button>
+                </div>
+            </div>
+            <p class="ew-note" id="noticeCount"></p>
+            <ul class="notice-list" id="noticeList"></ul>
+            <p class="ew-note" id="noNotices" hidden>No warnings match these filters.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="wrap">
+            <h2 class="ew-heading">Prevention Recommendations</h2>
+            <div class="filter-row">
+                <div>
+                    <label for="preventDisease" class="ew-label">Choose a disease</label>
+                    <select id="preventDisease"></select>
+                </div>
+                <div>
+                    <p class="ew-note" id="preventRiskNote"></p>
+                </div>
+            </div>
+            <div class="prevent-box">
+                <span class="risk-badge" id="preventRisk"></span>
+                <h3 id="preventTitle"></h3>
+                <ul id="preventList"></ul>
+                <p class="prevent-extra" id="preventExtra" hidden></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-grey">
+        <div class="wrap">
+            <h2 class="ew-heading">Official Information Sources</h2>
+            <p>Go to these trusted organisations for real, up-to-date health information.</p>
+            <ul class="source-list" id="sourceList"></ul>
+            <p class="ew-note">
+                About the risk levels: the four levels (Low, Moderate, High, Critical) are an educational rating made for this project.
+                Health authorities do not use this scale. A township named by the Ministry of Health in an outbreak report is rated High.
+                See the <a href="references.html">Medical References</a> page for every source we used.
+            </p>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="footer-grid">
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="disease-library.html">Disease Library</a></li>
+                        <li><a href="symptom-checker.html">Symptom Checker</a></li>
+                        <li><a href="myth-vs-facts.html">Myth vs Fact</a></li>
+                        <li><a href="early-warning.html">Early Warning</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Resources</h4>
+                    <div class="footer-underline"></div>
+                    <ul>
+                        <li><a href="hospital-directory.html">Hospital Directory</a></li>
+                        <li><a href="references.html">Medical References</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="emergency-protocol.html">Emergency Protocol</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="about_us.html">About CATALYST</a></li>
+                        <li><a href="contact_us.html">Contact Us</a></li>
+                        <li><a href="#" class="signin-link">Sign In</a></li>
+                        <li><a href="#" class="signup-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Connect</h4>
+                    <div class="footer-underline"></div>
+                    <p>
+                        Knowledge creates awareness. Awareness creates change.
+                        Explore reliable information about infectious diseases and
+                        help build safer communities.
+                    </p>
+
+                    <form id="footerForm" class="footer-form">
+                        <label for="footerEmail" class="footer-hidden">Email address</label>
+                        <input type="email" id="footerEmail" placeholder="Enter your email">
+                        <button type="submit" class="nav-btn nav-btn-teal">Stay Informed</button>
+                    </form>
+
+                    <p id="footerMessage" class="footer-message">Reliable information. A healthier future.</p>
+
+                    <p>
+                        <a href="https://www.who.int/" target="_blank" rel="noopener">WHO</a> |
+                        <a href="https://www.mohs.gov.mm/" target="_blank" rel="noopener">MoHS Myanmar</a> |
+                        <a href="contact_us.html">Email us</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="footerYear">2026</span> CATALYST. All rights reserved.</p>
+                <nav>
+                    <a href="references.html">References</a>
+                    <a href="privacy-policy.html">Privacy</a>
+                    <a href="about_us.html">About</a>
+                    <a href="contact_us.html">Contact</a>
+                    <a href="#" class="signin-link">Sign In</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script src="auth.js"></script>
+    <script src="warning-data.js"></script>
+    <script src="early-warning.js"></script>
+
+</body>
+</html>

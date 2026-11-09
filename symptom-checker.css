@@ -1,0 +1,201 @@
+.checker-layout {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.checker-form,
+.result-box {
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.result-box {
+    position: sticky;
+    top: 90px;
+}
+
+.result-box h2 {
+    font-size: 24px;
+}
+
+.result-box h3 {
+    font-size: 16px;
+    margin: 18px 0 6px;
+}
+
+.step {
+    margin-bottom: 26px;
+}
+
+.step h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 17px;
+    margin: 0 0 12px;
+}
+
+.step-number {
+    flex: none;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #0d2235;
+    color: white;
+    font-size: 14px;
+}
+
+.step select {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    font-size: 16px;
+    font-family: inherit;
+    background-color: white;
+    border: 2px solid #cbd5e1;
+    border-radius: 10px;
+}
+
+.step select:focus {
+    outline: none;
+    border-color: #00bdbe;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 8px 14px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    font-size: 15px;
+    line-height: 1.3;
+    cursor: pointer;
+}
+
+.option input {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: #00bdbe;
+}
+
+.option:hover {
+    border-color: #00bdbe;
+}
+
+.option:has(input:checked) {
+    border-color: #00bdbe;
+    background-color: #e6fafa;
+    font-weight: 600;
+}
+
+.step-warning {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.step-warning .option {
+    background-color: white;
+}
+
+.step-warning .option:has(input:checked) {
+    border-color: #dc2626;
+    background-color: #fee2e2;
+}
+
+.step-warning .option input {
+    accent-color: #dc2626;
+}
+
+.result-badge {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.badge-emergency {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+.badge-urgent {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.badge-routine {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.disease-tag {
+    display: inline-block;
+    background-color: #e6fafa;
+    color: #007f80;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 3px 12px;
+    margin: 0 6px 6px 0;
+}
+
+#recommendationsList {
+    margin: 0;
+    padding-left: 20px;
+    color: #475569;
+}
+
+.disclaimer {
+    background-color: #f1f5f9;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 14px;
+    color: #475569;
+    margin: 20px 0;
+}
+
+@media (max-width: 900px) {
+    .checker-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .result-box {
+        position: static;
+    }
+
+    .option-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.myanmar-note {
+    background-color: #e6fafa;
+    border-left: 4px solid #00bdbe;
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #0d2235;
+    font-size: 15px;
+}
